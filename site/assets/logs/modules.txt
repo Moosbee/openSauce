@@ -1,0 +1,32 @@
+2022-04-20 15:06:25	?	?	Saved module info caches
+2022-04-20 15:06:25	?	?	Found 2 module(s) missing file: FieldtypeNumber => C:/xampp/htdocs/openSauce/site/modules/FieldtypeNumber/FieldtypeNumber.module, ProcessPage => C:/xampp/htdocs/openSauce/site/modules/ProcessPage/ProcessPage.module
+2022-04-20 15:06:25	guest	http://localhost/openSauce/http404/	Saved module info caches
+2022-04-20 15:06:25	guest	http://localhost/openSauce/http404/	Found 2 module(s) missing file: FieldtypeNumber => C:/xampp/htdocs/openSauce/site/modules/FieldtypeNumber/FieldtypeNumber.module, ProcessPage => C:/xampp/htdocs/openSauce/site/modules/ProcessPage/ProcessPage.module
+2022-04-20 15:06:26	guest	http://localhost/openSauce/http404/	Installed module 'ProcessRecentPages'
+2022-04-20 15:06:26	guest	http://localhost/openSauce/http404/	Saved module info caches
+2022-04-20 15:06:26	guest	http://localhost/openSauce/http404/	Found 2 module(s) missing file: FieldtypeNumber => C:/xampp/htdocs/openSauce/site/modules/FieldtypeNumber/FieldtypeNumber.module, ProcessPage => C:/xampp/htdocs/openSauce/site/modules/ProcessPage/ProcessPage.module
+2022-04-20 15:06:26	guest	http://localhost/openSauce/http404/	Saved module info caches
+2022-04-20 15:06:26	guest	http://localhost/openSauce/http404/	Found 2 module(s) missing file: FieldtypeNumber => C:/xampp/htdocs/openSauce/site/modules/FieldtypeNumber/FieldtypeNumber.module, ProcessPage => C:/xampp/htdocs/openSauce/site/modules/ProcessPage/ProcessPage.module
+2022-04-20 15:06:26	guest	http://localhost/openSauce/http404/	Installed module 'AdminThemeUikit'
+2022-04-20 15:06:26	guest	http://localhost/openSauce/http404/	Saved module info caches
+2022-04-20 15:06:26	guest	http://localhost/openSauce/http404/	Found 2 module(s) missing file: FieldtypeNumber => C:/xampp/htdocs/openSauce/site/modules/FieldtypeNumber/FieldtypeNumber.module, ProcessPage => C:/xampp/htdocs/openSauce/site/modules/ProcessPage/ProcessPage.module
+2022-04-20 15:06:30	guest	http://localhost/openSauce/processwire/login/	Saved module info caches
+2022-04-20 15:06:30	guest	http://localhost/openSauce/processwire/login/	Found 2 module(s) missing file: FieldtypeNumber => C:/xampp/htdocs/openSauce/site/modules/FieldtypeNumber/FieldtypeNumber.module, ProcessPage => C:/xampp/htdocs/openSauce/site/modules/ProcessPage/ProcessPage.module
+2022-04-20 15:06:30	guest	http://localhost/openSauce/processwire/login/	Installed module 'ProcessLogger'
+2022-04-20 15:06:30	guest	http://localhost/openSauce/processwire/login/	Saved module info caches
+2022-04-20 15:06:30	guest	http://localhost/openSauce/processwire/login/	Found 2 module(s) missing file: FieldtypeNumber => C:/xampp/htdocs/openSauce/site/modules/FieldtypeNumber/FieldtypeNumber.module, ProcessPage => C:/xampp/htdocs/openSauce/site/modules/ProcessPage/ProcessPage.module
+2022-04-20 15:06:30	guest	http://localhost/openSauce/processwire/login/	Installed module 'InputfieldIcon'
+2022-04-20 15:06:30	guest	http://localhost/openSauce/processwire/login/	Saved module info caches
+2022-04-20 15:06:30	guest	http://localhost/openSauce/processwire/login/	Found 2 module(s) missing file: FieldtypeNumber => C:/xampp/htdocs/openSauce/site/modules/FieldtypeNumber/FieldtypeNumber.module, ProcessPage => C:/xampp/htdocs/openSauce/site/modules/ProcessPage/ProcessPage.module
+2022-04-20 15:06:36	?	?	Saved module info caches
+2022-04-20 15:06:36	?	?	Found 2 module(s) missing file: FieldtypeNumber => C:/xampp/htdocs/openSauce/site/modules/FieldtypeNumber/FieldtypeNumber.module, ProcessPage => C:/xampp/htdocs/openSauce/site/modules/ProcessPage/ProcessPage.module
+2022-04-20 15:06:37	?	?	Saved module info caches
+2022-04-20 15:06:37	?	?	Found 2 module(s) missing file: FieldtypeNumber => C:/xampp/htdocs/openSauce/site/modules/FieldtypeNumber/FieldtypeNumber.module, ProcessPage => C:/xampp/htdocs/openSauce/site/modules/ProcessPage/ProcessPage.module
+2022-04-20 15:06:37	?	?	Saved module info caches
+2022-04-20 15:06:37	?	?	Found 2 module(s) missing file: FieldtypeNumber => C:/xampp/htdocs/openSauce/site/modules/FieldtypeNumber/FieldtypeNumber.module, ProcessPage => C:/xampp/htdocs/openSauce/site/modules/ProcessPage/ProcessPage.module
+2022-05-04 14:18:21	admin	http://localhost/openSauce/processwire/setup/template/edit?id=43	Installed module 'InputfieldTextTags'
+2022-05-04 14:18:23	admin	http://localhost/openSauce/processwire/setup/template/edit?id=43	Saved module info caches
+2022-05-04 14:18:24	admin	http://localhost/opensauce/processwire/setup/field/navjson/	Saved module info caches
+2022-05-04 14:18:24	admin	http://localhost/opensauce/processwire/setup/template/navjson/	Saved module info caches
+2022-05-04 15:01:00	admin	http://localhost/openSauce/processwire/setup/field/edit?id=99	Installed module 'InputfieldToggle'
+2022-05-04 15:01:01	admin	http://localhost/openSauce/processwire/setup/field/edit?id=99	Saved module info caches
