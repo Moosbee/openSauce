@@ -482,5 +482,5 @@ DirectoryIndex index.php index.html index.htm
 # END PROCESSWIRE HTACCESS DIRECTIVES
 #################################################################################################
 
-RedirectMatch 404 /\.git
+
 

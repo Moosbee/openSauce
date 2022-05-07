@@ -1,2 +1,4 @@
 2022-04-20 15:06:35	admin	http://localhost/openSauce/processwire/login/	Successful login for 'admin'
 2022-05-04 14:09:53	admin	http://localhost/openSauce/processwire/login/	Successful login for 'admin'
+2022-05-05 14:45:55	admin	http://localhost/openSauce/processwire/login/	Successful login for 'admin'
+2022-05-05 16:13:23	?	?	User 'admin' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
