@@ -1,0 +1,19 @@
+{
+  "name": "database-synch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "import":"node import.js",
+    "export":"node export.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysqldump": "^3.2.0"
+  },
+  "devDependencies": {
+    "mysql-import": "^5.0.21"
+  }
+}
