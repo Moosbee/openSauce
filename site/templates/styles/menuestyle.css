@@ -1,5 +1,13 @@
 /* @import url(./style.css); */
 
+:root {
+    --col-primary: #65211F;
+    --col-secondary: #EE964B;
+    /* --col-primary:#4F5D2F; */
+    --col-background: #D4F4DD;
+    --col-text: #0C0A3E;
+}
+
 
 .hide {
     display: none !important;
@@ -48,9 +56,12 @@
     text-align: center;
     font-size: larger;
     padding: 10px;
+    color: var(--col-secondary);
+    background-color: green;
 }
 .menuitemsdesktop{
-
+    background-color: lightgreen;
+    display: flex;
 }
 
 
