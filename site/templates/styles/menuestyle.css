@@ -1,16 +1,102 @@
 /* @import url(./style.css); */
 
 :root {
-    --col-primary: #65211F;
-    --col-secondary: #EE964B;
-    /* --col-primary:#4F5D2F; */
-    --col-background: #D4F4DD;
-    --col-text: #0C0A3E;
+  --col-primary: #65211f;
+  --col-secondary: #ee964b;
+  /* --col-primary:#4F5D2F; */
+  --col-background: #d4f4dd;
+  --col-text: #0c0a3e;
 }
 
-
 .hide {
-    display: none !important;
+  display: none !important;
+}
+
+.menu {
+  /* display: block; */
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.submenu {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  left: 0px;
+  list-style-type: none;
+  display: block;
+  min-width: 125px;
+  width: max-content;
+  z-index: 9;
+}
+
+.menu .submenu .submenu {
+  position: absolute;
+  left: 100px;
+  top: 0px;
+}
+
+.menu .submenu {
+  display: none;
+}
+
+.menu li {
+  position: relative;
+  /* z-index: 1; */
+  background-color: var(--col-primary);
+}
+
+.menu li a:hover {
+    filter: brightness(0.8);
+}
+
+.menu li.dropdown:hover > .submenu {
+  display: block;
+}
+
+.menu li a {
+  display: block;
+  color: var(--col-secondary);
+  font-size: 1.6rem;
+  padding: 0.5rem;
+}
+
+.submenu li {
+  display: block;
+}
+
+.submenu li a {
+  display: block;
+}
+
+.menu .submenu > li.dropdown:hover > .submenu {
+  display: block;
+}
+
+.menu li.dropdown > a::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f0d7";
+}
+
+.submenu li.dropdown > a:after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f0da";
+}
+
+/* 
+.menuboxdesktop{
+    text-align: center;
+    font-size: larger;
+    padding: 10px;
+    color: var(--col-secondary);
+    background-color: green;
+}
+.menuitemsdesktop{
+    background-color: lightgreen;
+    display: flex;
 }
 
 .menu {
@@ -38,7 +124,6 @@
 }
 
 .menuitemspocket {
-    /* background-color: cadetblue; */
     display: flex;
     flex-direction: column;
 }
@@ -50,18 +135,6 @@
     padding: 5px;
     border-top: 2.5px dashed var(--col-text);
     border-bottom: 2.5px dashed var(--col-text);
-}
-
-.menuboxdesktop{
-    text-align: center;
-    font-size: larger;
-    padding: 10px;
-    color: var(--col-secondary);
-    background-color: green;
-}
-.menuitemsdesktop{
-    background-color: lightgreen;
-    display: flex;
 }
 
 
@@ -107,4 +180,4 @@
     .menuitemsdesktop {
         display: none;
     }
-}
+} */

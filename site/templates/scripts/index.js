@@ -11,11 +11,11 @@ window.addEventListener('DOMContentLoaded', () => {
     $(".start").hide();
 
 
-    document.getElementById("openClose").addEventListener("click", () => {
-        let duration = 500;
-        $(".switchIcon").fadeToggle(100);
-        $(".menuitemspocket").slideToggle(duration);
-    });
+    // document.getElementById("openClose").addEventListener("click", () => {
+    //     let duration = 500;
+    //     $(".switchIcon").fadeToggle(100);
+    //     $(".menuitemspocket").slideToggle(duration);
+    // });
 
 
 
