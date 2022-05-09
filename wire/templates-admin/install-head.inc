@@ -15,6 +15,7 @@ if(!isset($bgTitle)) $bgTitle = "Installer";
 	<link rel="stylesheet" type="text/css" href="wire/templates-admin/styles/ui.css" />
 	<link rel="stylesheet" type="text/css" href="wire/templates-admin/styles/inputfields.css" />
 	<link rel="stylesheet" type="text/css" href="wire/templates-admin/styles/install.css" />
+    <link rel="shortcut icon" href="<?php echo $config->urls->root ?>favicon.ico" type="image/x-icon">
 
 	<script type="text/javascript" src="wire/modules/Jquery/JqueryCore/JqueryCore.js"></script>
 	<script type="text/javascript" src="wire/templates-admin/scripts/install.js"></script>
