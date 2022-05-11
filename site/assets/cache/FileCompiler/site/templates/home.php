@@ -14,7 +14,8 @@
     <script src="<?php echo $config->urls->templates ?>scripts/slider.js"></script>
     <script src="<?php echo $config->urls->templates ?>scripts/jquery-3.6.0.min.js"></script>
 
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/open-sauce-one" type="text/css" />
+    <!-- <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/open-sauce-one" type="text/css" /> -->
+    <link href="<?php echo $config->urls->templates ?>styles/open-sauce-font.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/style.css">
     <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/menuestyle.css">
@@ -25,8 +26,16 @@
 </head>
 
 <body>
-    <nav id="nav">
-        <ul class="menu">
+    <nav>
+        <div class="mobilemenu">
+            <a class="menuicon" href="<?php echo $config->urls->root ?>"><img class="logo" src="<?php echo $config->urls->templates ?>images/logo1.png" alt="Logo" srcset=""></a>
+            <h1 class="Titel">OpenSauce</h1>
+            <button id="openClose">
+            <div class="fas fa-align-justify small switchIcon"></div>
+            <div class="fas fa-times small switchIcon start"></div>
+        </button>
+        </div>
+        <ul class="menu hidefon">
             <li><a href="<?php echo $config->urls->root ?>">Home</a></li>
             <li class="dropdown">
                 <a href="">Service</a>
