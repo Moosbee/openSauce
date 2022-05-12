@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <script src="https://kit.fontawesome.com/18e03e461d.js" crossorigin="anonymous"></script>
 
     <link rel="shortcut icon" href="<?php echo $config->urls->root ?>favicon.ico" type="image/x-icon">
@@ -22,7 +23,7 @@
     <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/menuestyle.css">
     <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/sliderstyle.css">
 
-    <title>Open Sauce</title>
+    <title><?php echo ($page->title == "Home" ? "OpenSauce" : $page->title) ?></title>
 
 </head>
 
@@ -36,7 +37,7 @@
                 <div class="fas fa-times small switchIcon start"></div>
             </button>
         </div>
-        <ul class="menu">
+        <ul class="menu hidefon">
             <li>
                 <div><a href="<?php echo $config->urls->root ?>">Home</a></div>
             </li>

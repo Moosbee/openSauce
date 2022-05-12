@@ -219,7 +219,7 @@ CREATE TABLE IF NOT EXISTS `pages` (
   KEY `created` (`created`),
   KEY `status` (`status`),
   KEY `published` (`published`)
-) ENGINE = MyISAM AUTO_INCREMENT = 1022 DEFAULT CHARSET = utf8;
+) ENGINE = MyISAM AUTO_INCREMENT = 1024 DEFAULT CHARSET = utf8;
 
 # ------------------------------------------------------------
 # SCHEMA DUMP FOR TABLE: pages_access
@@ -345,7 +345,7 @@ INSERT INTO
 VALUES
   (
     'FileCompiler__a00a54d9a295494ebe10b695958f576b',
-    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/templates\\/home.php\",\"hash\":\"8160ebf0fdf5a037abcb7b11ef60eb99\",\"size\":4273,\"time\":1651758735,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/home.php\",\"hash\":\"8160ebf0fdf5a037abcb7b11ef60eb99\",\"size\":4273,\"time\":1651758735}}',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/templates\\/home.php\",\"hash\":\"2b363956e816cbf5c16de873632c9623\",\"size\":8676,\"time\":1652360342,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/home.php\",\"hash\":\"2b363956e816cbf5c16de873632c9623\",\"size\":8676,\"time\":1652360342}}',
     '2010-04-08 03:10:10'
   );
 INSERT INTO
@@ -773,6 +773,14 @@ INSERT INTO
   `field_title` (`pages_id`, `data`)
 VALUES
   (1021, 'Salzburg');
+INSERT INTO
+  `field_title` (`pages_id`, `data`)
+VALUES
+  (1022, 'Legal Stuff');
+INSERT INTO
+  `field_title` (`pages_id`, `data`)
+VALUES
+  (1023, 'Privacy Policy');
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: fieldgroups
@@ -3015,6 +3023,62 @@ VALUES
     '2022-05-08 20:55:49',
     1
   );
+INSERT INTO
+  `pages` (
+    `id`,
+    `parent_id`,
+    `templates_id`,
+    `name`,
+    `status`,
+    `modified`,
+    `modified_users_id`,
+    `created`,
+    `created_users_id`,
+    `published`,
+    `sort`
+  )
+VALUES
+  (
+    1022,
+    1,
+    29,
+    'legal-stuff',
+    1,
+    '2022-05-12 15:23:49',
+    41,
+    '2022-05-12 15:23:26',
+    41,
+    '2022-05-12 15:23:26',
+    7
+  );
+INSERT INTO
+  `pages` (
+    `id`,
+    `parent_id`,
+    `templates_id`,
+    `name`,
+    `status`,
+    `modified`,
+    `modified_users_id`,
+    `created`,
+    `created_users_id`,
+    `published`,
+    `sort`
+  )
+VALUES
+  (
+    1023,
+    1,
+    29,
+    'privacy-policy',
+    1,
+    '2022-05-12 15:24:04',
+    41,
+    '2022-05-12 15:24:04',
+    41,
+    '2022-05-12 15:24:04',
+    8
+  );
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: pages_access
@@ -3108,6 +3172,14 @@ INSERT INTO
   `pages_access` (`pages_id`, `templates_id`, `ts`)
 VALUES
   (1021, 1, '2022-05-08 20:55:49');
+INSERT INTO
+  `pages_access` (`pages_id`, `templates_id`, `ts`)
+VALUES
+  (1022, 1, '2022-05-12 15:23:26');
+INSERT INTO
+  `pages_access` (`pages_id`, `templates_id`, `ts`)
+VALUES
+  (1023, 1, '2022-05-12 15:24:04');
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: pages_parents
@@ -3162,7 +3234,7 @@ VALUES
 INSERT INTO
   `session_login_throttle` (`name`, `attempts`, `last_attempt`)
 VALUES
-  ('admin', 1, 1652024670);
+  ('admin', 1, 1652360391);
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: templates
@@ -3256,7 +3328,7 @@ VALUES
     1,
     0,
     0,
-    '{\"useRoles\":1,\"noParents\":1,\"slashUrls\":1,\"compile\":3,\"modified\":1652038005,\"ns\":\"\\\\\",\"roles\":[37]}'
+    '{\"useRoles\":1,\"noParents\":1,\"slashUrls\":1,\"compile\":3,\"modified\":1652360342,\"ns\":\"\\\\\",\"roles\":[37]}'
   );
 INSERT INTO
   `templates` (
@@ -3274,7 +3346,7 @@ VALUES
     83,
     0,
     0,
-    '{\"slashUrls\":1,\"compile\":3,\"modified\":1652023784,\"ns\":\"\\\\\"}'
+    '{\"slashUrls\":1,\"compile\":3,\"modified\":1652360539,\"ns\":\"\\\\\"}'
   );
 INSERT INTO
   `templates` (

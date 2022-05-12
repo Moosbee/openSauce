@@ -4,3 +4,4 @@
 2022-05-05 16:13:23	?	?	User 'admin' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
 2022-05-08 17:41:11	guest	http://localhost/opensauce/processwire/login/	Error: Failed login for 'admin' - Invalid password
 2022-05-08 17:44:30	admin	http://localhost/opensauce/processwire/login/	Successful login for 'admin'
+2022-05-12 14:59:51	admin	http://localhost/openSauce/processwire/login/	Successful login for 'admin'
