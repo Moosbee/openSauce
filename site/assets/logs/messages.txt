@@ -1,1 +1,6 @@
 2022-05-05 15:10:27	admin	http://localhost/openSauce/processwire/page/edit/?id=1	Populated initial created/modified dates for 'sliderbilder'
+2022-05-12 21:08:58	admin	http://localhost/opensauce/processwire/page/sort/	Updated sort for 3 pages
+2022-05-12 21:09:59	admin	http://localhost/opensauce/processwire/page/sort/	Updated sort for 3 pages
+2022-05-12 21:10:50	admin	http://localhost/opensauce/processwire/page/sort/	Updated sort for 2 pages
+2022-05-12 21:15:43	admin	http://localhost/opensauce/processwire/page/sort/	Updated sort for 1 pages
+2022-05-12 21:16:04	admin	http://localhost/opensauce/processwire/page/sort/	Updated sort for 2 pages

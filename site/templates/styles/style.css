@@ -1,7 +1,7 @@
 :root {
     --col-primary: #65211F;
     --col-secondary: #EE964B;
-    /* --col-primary:#4F5D2F; */
+    --col-tertiary:#4F5D2F;
     --col-background: #D4F4DD;
     --col-text: #0C0A3E;
 }
@@ -35,25 +35,6 @@ nav {
 section {
     background-color: var(--col-background);
 }
-
-
-footer {
-    background-color: var(--col-text);
-    color: var(--col-background);
-    display: flex;
-    justify-content: space-between;
-    height: 5vh;
-}
-
-footer h6 {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-
-
 
 
 

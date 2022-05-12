@@ -22,7 +22,6 @@
     /* display: block; */
     /* display: flex; */
     display: contents;
-    list-style: none;
   }
 
   .menuicon {
@@ -206,6 +205,7 @@
   .menu li div {
     display: flex;
     justify-content: space-between;
+    /* border-bottom: 1px var(--col-background) solid; */
   }
 
   .submenu li {
@@ -268,6 +268,9 @@ nav{
   color: var(--col-nav-text);
   font-size: 1.6rem;
   padding: 0.5rem;
+}
+.menu li div a:active {
+filter: brightness(0.8);
 }
 
 /* @media (min-width: 1200px) {

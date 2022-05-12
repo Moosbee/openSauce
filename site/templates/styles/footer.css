@@ -1,0 +1,41 @@
+:root {
+  --col-primary: #65211f;
+  --col-secondary: #ee964b;
+  --col-tertiary: #4f5d2f;
+  --col-background: #d4f4dd;
+  --col-text: #0c0a3e;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+
+  color: var(--col-background);
+  background-color: var(--col-text);
+  /* height: 5vh; */
+}
+
+.footerdark {
+  color: var(--col-tertiary);
+}
+
+footer a {
+  color: var(--col-background);
+  cursor: pointer;
+  text-decoration: underline;
+}
+footer a:hover {
+  color: var(--col-secondary);
+}
+
+footer > div {
+  margin: 0.2rem;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}

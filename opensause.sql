@@ -219,7 +219,7 @@ CREATE TABLE IF NOT EXISTS `pages` (
   KEY `created` (`created`),
   KEY `status` (`status`),
   KEY `published` (`published`)
-) ENGINE = MyISAM AUTO_INCREMENT = 1024 DEFAULT CHARSET = utf8;
+) ENGINE = MyISAM AUTO_INCREMENT = 1026 DEFAULT CHARSET = utf8;
 
 # ------------------------------------------------------------
 # SCHEMA DUMP FOR TABLE: pages_access
@@ -369,7 +369,7 @@ INSERT INTO
 VALUES
   (
     'FileCompiler__4a9f9fbce61e8510ca18715082aa351d',
-    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/opensauce\\/site\\/templates\\/home.php\",\"hash\":\"cff9bad0d27862a08f331e315e58d0ee\",\"size\":5421,\"time\":1652038005,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/opensauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/home.php\",\"hash\":\"cff9bad0d27862a08f331e315e58d0ee\",\"size\":5421,\"time\":1652038005}}',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/opensauce\\/site\\/templates\\/home.php\",\"hash\":\"38b6611cd7a3cfe7f7c6c5469d4a7592\",\"size\":8981,\"time\":1652385499,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/opensauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/home.php\",\"hash\":\"38b6611cd7a3cfe7f7c6c5469d4a7592\",\"size\":8981,\"time\":1652385499}}',
     '2010-04-08 03:10:10'
   );
 INSERT INTO
@@ -776,11 +776,15 @@ VALUES
 INSERT INTO
   `field_title` (`pages_id`, `data`)
 VALUES
-  (1022, 'Legal Stuff');
+  (1023, 'Privacy Policy');
 INSERT INTO
   `field_title` (`pages_id`, `data`)
 VALUES
-  (1023, 'Privacy Policy');
+  (1024, 'About Us');
+INSERT INTO
+  `field_title` (`pages_id`, `data`)
+VALUES
+  (1025, 'Legal Stuff');
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: fieldgroups
@@ -1644,7 +1648,7 @@ VALUES
     1,
     'home',
     9,
-    '2022-05-04 15:02:42',
+    '2022-05-12 21:09:10',
     41,
     '2022-04-20 15:06:07',
     2,
@@ -1677,7 +1681,7 @@ VALUES
     '2022-04-20 15:06:07',
     2,
     '2022-04-20 15:06:07',
-    5
+    11
   );
 INSERT INTO
   `pages` (
@@ -1756,12 +1760,12 @@ VALUES
     2,
     'trash',
     1039,
-    '2022-04-20 15:06:07',
+    '2022-05-12 21:15:43',
     41,
     '2022-04-20 15:06:07',
     2,
     '2022-04-20 15:06:07',
-    6
+    12
   );
 INSERT INTO
   `pages` (
@@ -2013,7 +2017,7 @@ VALUES
     '2022-04-20 15:06:07',
     3,
     '2022-04-20 15:06:07',
-    4
+    10
   );
 INSERT INTO
   `pages` (
@@ -2853,7 +2857,7 @@ VALUES
     '2022-05-04 14:29:19',
     41,
     '2022-05-04 14:29:27',
-    3
+    5
   );
 INSERT INTO
   `pages` (
@@ -3039,17 +3043,17 @@ INSERT INTO
   )
 VALUES
   (
-    1022,
-    1,
+    1023,
+    1024,
     29,
-    'legal-stuff',
+    'privacy-policy',
     1,
-    '2022-05-12 15:23:49',
+    '2022-05-12 21:16:43',
     41,
-    '2022-05-12 15:23:26',
+    '2022-05-12 15:24:04',
     41,
-    '2022-05-12 15:23:26',
-    7
+    '2022-05-12 15:24:04',
+    1
   );
 INSERT INTO
   `pages` (
@@ -3067,17 +3071,45 @@ INSERT INTO
   )
 VALUES
   (
-    1023,
+    1024,
     1,
     29,
-    'privacy-policy',
+    'about-us',
     1,
-    '2022-05-12 15:24:04',
+    '2022-05-12 21:16:04',
     41,
-    '2022-05-12 15:24:04',
+    '2022-05-12 21:08:41',
     41,
-    '2022-05-12 15:24:04',
-    8
+    '2022-05-12 21:08:41',
+    9
+  );
+INSERT INTO
+  `pages` (
+    `id`,
+    `parent_id`,
+    `templates_id`,
+    `name`,
+    `status`,
+    `modified`,
+    `modified_users_id`,
+    `created`,
+    `created_users_id`,
+    `published`,
+    `sort`
+  )
+VALUES
+  (
+    1025,
+    1024,
+    29,
+    'legal-stuff',
+    1,
+    '2022-05-12 21:10:36',
+    41,
+    '2022-05-12 21:10:36',
+    41,
+    '2022-05-12 21:10:36',
+    2
   );
 
 # ------------------------------------------------------------
@@ -3175,11 +3207,15 @@ VALUES
 INSERT INTO
   `pages_access` (`pages_id`, `templates_id`, `ts`)
 VALUES
-  (1022, 1, '2022-05-12 15:23:26');
+  (1023, 1, '2022-05-12 21:15:53');
 INSERT INTO
   `pages_access` (`pages_id`, `templates_id`, `ts`)
 VALUES
-  (1023, 1, '2022-05-12 15:24:04');
+  (1024, 1, '2022-05-12 21:08:41');
+INSERT INTO
+  `pages_access` (`pages_id`, `templates_id`, `ts`)
+VALUES
+  (1025, 1, '2022-05-12 21:10:36');
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: pages_parents
@@ -3234,7 +3270,7 @@ VALUES
 INSERT INTO
   `session_login_throttle` (`name`, `attempts`, `last_attempt`)
 VALUES
-  ('admin', 1, 1652360391);
+  ('admin', 1, 1652382451);
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: templates
@@ -3328,7 +3364,7 @@ VALUES
     1,
     0,
     0,
-    '{\"useRoles\":1,\"noParents\":1,\"slashUrls\":1,\"compile\":3,\"modified\":1652360342,\"ns\":\"\\\\\",\"roles\":[37]}'
+    '{\"useRoles\":1,\"noParents\":1,\"slashUrls\":1,\"compile\":3,\"modified\":1652385499,\"ns\":\"\\\\\",\"roles\":[37]}'
   );
 INSERT INTO
   `templates` (
@@ -3346,7 +3382,7 @@ VALUES
     83,
     0,
     0,
-    '{\"slashUrls\":1,\"compile\":3,\"modified\":1652360539,\"ns\":\"\\\\\"}'
+    '{\"slashUrls\":1,\"compile\":3,\"modified\":1652376964,\"ns\":\"\\\\\"}'
   );
 INSERT INTO
   `templates` (

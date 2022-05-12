@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <script src="https://kit.fontawesome.com/18e03e461d.js" crossorigin="anonymous"></script>
 
     <link rel="shortcut icon" href="<?php echo $config->urls->root ?>favicon.ico" type="image/x-icon">
@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/style.css">
     <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/menuestyle.css">
     <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/sliderstyle.css">
+    <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/footer.css">
 
     <title><?php echo ($page->title == "Home" ? "OpenSauce" : $page->title) ?></title>
 
@@ -31,7 +32,7 @@
     <nav>
         <div class="mobilemenu">
             <a class="menuicon" href="<?php echo $config->urls->root ?>"><img class="logo" src="<?php echo $config->urls->templates ?>images/logo1.png" alt="Logo" srcset=""></a>
-            <h1 class="Titel">OpenSauce</h1>
+            <h1 class="Titel"><?php echo ($page->title == "Home" ? "OpenSauce" : $page->title) ?></h1>
             <button id="openClose">
                 <div class="fas fa-align-justify small switchIcon"></div>
                 <div class="fas fa-times small switchIcon start"></div>
@@ -180,9 +181,12 @@
 
     </section>
     <footer>
-        <h6>© Bernhard Rieder</h6>
-        <h6>Fuck You</h6>
-        <?php if ($page->editable()) echo "<p><a href='$page->editURL'>Edit</a></p>"; ?>
+        <p class="footerdark">Copyright © 2022 OpenSause</p>
+        <div>
+            <a>Legal Stuff</a>
+            <a class="footerdark" href="<?php echo ($page->editable() ? $page->editURL : "#") ?>"><?php echo ($page->editable() ? "Edit" : "|") ?></a>
+            <a>Privacy Policy</a>
+        </div>
     </footer>
 
 </body>
