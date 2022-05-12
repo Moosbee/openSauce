@@ -11,6 +11,7 @@
 
     <!-- <script src="<?php echo $config->urls->templates ?>scripts/live.js"></script> -->
     <script src="<?php echo $config->urls->templates ?>scripts/index.js"></script>
+    <script src="<?php echo $config->urls->templates ?>scripts/menu.js"></script>
     <script src="<?php echo $config->urls->templates ?>scripts/slider.js"></script>
     <script src="<?php echo $config->urls->templates ?>scripts/jquery-3.6.0.min.js"></script>
 
@@ -31,48 +32,50 @@
             <a class="menuicon" href="<?php echo $config->urls->root ?>"><img class="logo" src="<?php echo $config->urls->templates ?>images/logo1.png" alt="Logo" srcset=""></a>
             <h1 class="Titel">OpenSauce</h1>
             <button id="openClose">
-            <div class="fas fa-align-justify small switchIcon"></div>
-            <div class="fas fa-times small switchIcon start"></div>
-        </button>
+                <div class="fas fa-align-justify small switchIcon"></div>
+                <div class="fas fa-times small switchIcon start"></div>
+            </button>
         </div>
-        <ul class="menu hidefon">
-            <li><a href="<?php echo $config->urls->root ?>">Home</a></li>
+        <ul class="menu">
+            <li>
+                <div><a href="<?php echo $config->urls->root ?>">Home</a></div>
+            </li>
             <li class="dropdown">
-                <a href="">Service</a>
+                <div><a href="">Service</a></div>
                 <ul class="submenu">
                     <li>
-                        <a href="">satu</a>
+                        <div> <a href="">satu</a></div>
                     </li>
                     <li class="dropdown">
-                        <a href="">dua</a>
+                        <div><a href="">dua</a></div>
                         <ul class="submenu">
                             <li class="dropdown">
-                                <a href="">jeruh dua</a>
+                                <div> <a href="">jeruh dua</a></div>
                                 <ul class="submenu">
                                     <li>
-                                        <a href="">mentok satu</a>
+                                        <div> <a href="">mentok satu</a></div>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="">mentok dua</a>
+                                        <div><a href="">mentok dua</a></div>
                                         <ul class="submenu">
                                             <li>
-                                                <a href="">njedok prend satu</a>
+                                                <div> <a href="">njedok prend satu</a></div>
                                             </li>
                                             <li>
-                                                <a href="">njedok prend dua</a>
+                                                <div><a href="">njedok prend dua</a></div>
                                             </li>
                                             <li>
-                                                <a href="">njedok prend tiga</a>
+                                                <div><a href="">njedok prend tiga</a></div>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="">mentok satu</a>
+                                        <div><a href="">mentok satu</a></div>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="">jeruh satu</a>
+                                <div><a href="">jeruh satu</a></div>
                             </li>
                         </ul>
                     </li>
@@ -89,7 +92,7 @@
             }
             function echoLink($child)
             {
-                echo "<a href='$child->url'>$child->title</a>";
+                echo "<div><a href='$child->url'>$child->title</a></div>";
             }
 
             function echoChildren($childs)
