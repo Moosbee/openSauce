@@ -116,46 +116,6 @@
             echoChildren($homepage->children());
             ?>
         </ul>
-        <!-- <div class="menu">
-            <button id="openClose">
-                <div class="fas fa-align-justify small switchIcon"></div>
-                <div class="fas fa-times small switchIcon start"></div>
-            </button>
-            <div class="menuitemsdesktop">
-                <a class="menuboxdesktop" href="">Home</a>
-                <?php
-                // $homepage = $pages->get("/");
-
-                // function echoChild($child)
-                // {
-                //     echo "<a class='menuboxdesktop' href='$child->url'>$child->title</a>";
-                // }
-
-                // function echoChildren($childs)
-                // {
-                //     foreach ($childs as $child) {
-
-                //         if ($child->hasChildren()) {
-                //             echo "<div class='menuboxdesktop'>";
-                //             echoChild($child);
-                //             echoChildren($child->children());
-                //             echo "</div>";
-                //         } else {
-                //             echoChild($child);
-                //         }
-                //     }
-                // }
-
-                // echoChildren($homepage->children());
-                ?>
-
-            </div>
-        </div> -->
-        <!-- <div class="menuitemspocket start">
-            <a class="menubox" href="./index.php">Haupseite</a>
-            <a class="menubox" href="./funktion.php">Funktion</a>
-            <a class="menubox" href="./quellen.php">Quelle</a>
-        </div> -->
     </nav>
     <header>
         <div class="slider">
