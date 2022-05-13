@@ -116,60 +116,19 @@
             echoChildren($homepage->children());
             ?>
         </ul>
-        <!-- <div class="menu">
-            <button id="openClose">
-                <div class="fas fa-align-justify small switchIcon"></div>
-                <div class="fas fa-times small switchIcon start"></div>
-            </button>
-            <div class="menuitemsdesktop">
-                <a class="menuboxdesktop" href="">Home</a>
-                <?php
-                // $homepage = $pages->get("/");
-
-                // function echoChild($child)
-                // {
-                //     echo "<a class='menuboxdesktop' href='$child->url'>$child->title</a>";
-                // }
-
-                // function echoChildren($childs)
-                // {
-                //     foreach ($childs as $child) {
-
-                //         if ($child->hasChildren()) {
-                //             echo "<div class='menuboxdesktop'>";
-                //             echoChild($child);
-                //             echoChildren($child->children());
-                //             echo "</div>";
-                //         } else {
-                //             echoChild($child);
-                //         }
-                //     }
-                // }
-
-                // echoChildren($homepage->children());
-                ?>
-
-            </div>
-        </div> -->
-        <!-- <div class="menuitemspocket start">
-            <a class="menubox" href="./index.php">Haupseite</a>
-            <a class="menubox" href="./funktion.php">Funktion</a>
-            <a class="menubox" href="./quellen.php">Quelle</a>
-        </div> -->
     </nav>
     <header>
         <div class="slider">
             <div id="slideimg">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
+                <?php
+                if ($page->slider_images && count($page->slider_images)) {
+                    foreach ($page->slider_images as $image) {
+                        $croped = $image->getCrop('MainSlider');
+                        echo "<img width='1280' height='962' src='$croped->url' alt='Images' class='SliderItems'>";
+                    }
+                }
+                ?>
+                <!-- <img width="900" height="675" src="https://via.placeholder.com/900x675" alt="Images" class="SliderItems"> -->
             </div>
             <div class="Sliderbuttons">
                 <button id="Sliderprev" class="Sliderbutton"><i class="fas fa-chevron-left"></i></button>
@@ -183,9 +142,9 @@
     <footer>
         <p class="footerdark">Copyright © 2022 OpenSause</p>
         <div>
-            <a>Legal Stuff</a>
+            <a href="<?php echo $config->urls->root ?>/about-us/legal-stuff">Legal Stuff</a>
             <a class="footerdark" href="<?php echo ($page->editable() ? $page->editURL : "#") ?>"><?php echo ($page->editable() ? "Edit" : "|") ?></a>
-            <a>Privacy Policy</a>
+            <a href="<?php echo $config->urls->root ?>/about-us/privacy-policy/">Privacy Policy</a>
         </div>
     </footer>
 

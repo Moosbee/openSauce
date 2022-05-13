@@ -30,3 +30,10 @@
 2022-05-04 14:18:24	admin	http://localhost/opensauce/processwire/setup/template/navjson/	Saved module info caches
 2022-05-04 15:01:00	admin	http://localhost/openSauce/processwire/setup/field/edit?id=99	Installed module 'InputfieldToggle'
 2022-05-04 15:01:01	admin	http://localhost/openSauce/processwire/setup/field/edit?id=99	Saved module info caches
+2022-05-13 16:27:23	admin	http://localhost/opensauce/processwire/module/?reset=1	Saved module info caches
+2022-05-13 16:27:35	admin	http://localhost/opensauce/processwire/module/?reset=1	Saved module info caches
+2022-05-13 16:28:13	admin	http://localhost/opensauce/processwire/module/	Installed module 'InputfieldCroppableImage3'
+2022-05-13 16:28:13	admin	http://localhost/opensauce/processwire/module/	Installed module 'ProcessCroppableImage3'
+2022-05-13 16:28:13	admin	http://localhost/opensauce/processwire/module/	Installed module 'FieldtypeCroppableImage3'
+2022-05-13 16:28:13	admin	http://localhost/opensauce/processwire/module/	Installed module 'CroppableImage3'
+2022-05-13 16:28:13	admin	http://localhost/opensauce/processwire/module/	Saved module info caches

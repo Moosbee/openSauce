@@ -160,16 +160,15 @@
     <header>
         <div class="slider">
             <div id="slideimg">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
-                <img width="600" height="300" src="https://via.placeholder.com/600x300" alt="Images" class="SliderItems">
+                <?php
+                if ($page->slider_images && count($page->slider_images)) {
+                    foreach ($page->slider_images as $image) {
+                        $croped = $image->getCrop('MainSlider');
+                        echo "<img width='1280' height='962' src='$croped->url' alt='Images' class='SliderItems'>";
+                    }
+                }
+                ?>
+                <!-- <img width="900" height="675" src="https://via.placeholder.com/900x675" alt="Images" class="SliderItems"> -->
             </div>
             <div class="Sliderbuttons">
                 <button id="Sliderprev" class="Sliderbutton"><i class="fas fa-chevron-left"></i></button>
@@ -183,9 +182,9 @@
     <footer>
         <p class="footerdark">Copyright © 2022 OpenSause</p>
         <div>
-            <a>Legal Stuff</a>
+            <a href="<?php echo $config->urls->root ?>/about-us/legal-stuff">Legal Stuff</a>
             <a class="footerdark" href="<?php echo ($page->editable() ? $page->editURL : "#") ?>"><?php echo ($page->editable() ? "Edit" : "|") ?></a>
-            <a>Privacy Policy</a>
+            <a href="<?php echo $config->urls->root ?>/about-us/privacy-policy/">Privacy Policy</a>
         </div>
     </footer>
 

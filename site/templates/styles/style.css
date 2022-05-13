@@ -48,10 +48,6 @@ section {
     section {
         grid-template-columns: auto auto auto auto auto;
     }
-
-    header {
-        padding-top: 20%;
-    }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -59,19 +55,11 @@ section {
     section {
         grid-template-columns: auto auto auto auto;
     }
-
-    header {
-        padding-top: 20%;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     section {
         grid-template-columns: auto auto auto;
-    }
-
-    header {
-        padding-top: 30%;
     }
 }
 
@@ -79,18 +67,10 @@ section {
     section {
         grid-template-columns: auto auto;
     }
-
-    header {
-        padding-top: 40%;
-    }
 }
 
 @media (max-width: 575.98px) {
     section {
         grid-template-columns: auto;
-    }
-
-    header {
-        padding-top: 50%;
     }
 }
