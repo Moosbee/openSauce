@@ -77,7 +77,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <div><a href="">jeruh satu</a></div>
+                                <div><a href="">jeruh satu sos</a></div>
                             </li>
                         </ul>
                     </li>
