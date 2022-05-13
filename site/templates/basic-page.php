@@ -117,6 +117,8 @@
     </nav>
     <section>
 
+        <?php echo $page->standart_text;  ?>
+
     </section>
     <footer>
         <p class="footerdark">Copyright © 2022 OpenSause</p>

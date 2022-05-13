@@ -56,11 +56,11 @@
     /* width: min-content; */
   }
 
-  .menu>li {
+  .menu > li {
     order: 0;
   }
 
-  .menu>li:nth-child(2n) {
+  .menu > li:nth-child(2n) {
     order: 2;
   }
 
@@ -68,7 +68,7 @@
     filter: brightness(0.8);
   }
 
-  .menu li.dropdown:hover>.submenu {
+  .menu li.dropdown:hover > .submenu {
     display: block;
   }
 
@@ -87,17 +87,17 @@
     display: block;
   }
 
-  .menu .submenu>li.dropdown:hover>.submenu {
+  .menu .submenu > li.dropdown:hover > .submenu {
     display: block;
   }
 
-  .menu li.dropdown>div a::after {
+  .menu li.dropdown > div a::after {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: " \f0d7";
   }
 
-  .submenu li.dropdown>div a::after {
+  .submenu li.dropdown > div a::after {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: " \f0da";
@@ -124,7 +124,7 @@
   .menu {
     position: absolute;
     width: 100%;
-    min-height: calc(100vh - 3.3rem);
+    box-shadow: 0px 1000vh 0px 1000vh var(--col-nav-background);
     z-index: 5;
   }
 
@@ -144,7 +144,7 @@
     padding-left: 1rem;
   }
 
-  .menu li.dropdown>div::after {
+  .menu li.dropdown > div::after {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: " \f0d7";
@@ -153,7 +153,7 @@
     padding-right: 0.5rem;
   }
 
-  .submenu li.dropdown>div::after {
+  .submenu li.dropdown > div::after {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     content: " \f0d7";
@@ -196,7 +196,7 @@
     filter: brightness(0.8);
   }
 
-  .menu li.dropdown:hover>.submenu {
+  .menu li.dropdown:hover > .submenu {
     /* display: block; */
     display: flex;
     flex-direction: column;
@@ -215,26 +215,26 @@
     margin-left: 0.5rem;
   }
 
-  .menu .submenu>li.dropdown:hover>.submenu {
+  .menu .submenu > li.dropdown:hover > .submenu {
     /* display: block; */
     display: flex;
     flex-direction: column;
   }
 
-  .menu li.dropdown.open>.submenu {
+  .menu li.dropdown.open > .submenu {
     /* display: block; */
     display: flex;
     flex-direction: column;
   }
 
-  .menu .submenu>li.dropdown.open>.submenu {
+  .menu .submenu > li.dropdown.open > .submenu {
     /* display: block; */
     display: flex;
     flex-direction: column;
   }
 }
 
-nav{
+nav {
   box-shadow: 5px 8px 14px 2px rgba(12, 10, 62, 0.39);
   -webkit-box-shadow: 5px 8px 14px 2px rgba(12, 10, 62, 0.39);
   -moz-box-shadow: 5px 8px 14px 2px rgba(12, 10, 62, 0.39);
@@ -270,7 +270,7 @@ nav{
   padding: 0.5rem;
 }
 .menu li div a:active {
-filter: brightness(0.8);
+  filter: brightness(0.8);
 }
 
 /* @media (min-width: 1200px) {

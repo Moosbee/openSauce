@@ -216,7 +216,8 @@ $config = array(
                 'name' => 'style',
                 'label' => \ProcessWire\__("Position"),
                 'options' => array(
-                    'bottom_overlay' => \ProcessWire\__('Fixed Overlay at Bottom of Page')
+                    'bottom_overlay' => \ProcessWire\__('Fixed Overlay at Bottom of Page'),
+                    'center_modals' => \ProcessWire\__('Fixed Overlay in the Center of Page')
                 ),
                 'columnWidth' => 33,
                 'required' => true,

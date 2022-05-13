@@ -1,3 +1,11 @@
+:root {
+    --col-primary: #65211F;
+    --col-secondary: #EE964B;
+    --col-tertiary:#4F5D2F;
+    --col-background: #D4F4DD;
+    --col-text: #0C0A3E;
+}
+
 .pwcmb {
     box-sizing: border-box;
 }
@@ -8,10 +16,13 @@
 .pwcmb {
     position: fixed;
     z-index: 601;
-    background: white;
     width: 100%;
     left: 0;
     transition: top 0.25s;
+    background: var(--col-primary);
+    color: var(--col-secondary);
+    font-size: medium;
+
 }
 
 .js-show.pwcmb--top_overlay,
@@ -30,9 +41,10 @@
 .pwcmb-widget {
     position: absolute;
     width: 100%;
-    padding: 20px;
+    padding: 2rem;
     transition: 0.25s;
-    background: whitesmoke;
+    background: var(--col-primary);
+    color: var(--col-secondary);
 }
 
 .pwcmb--bottom_overlay .pwcmb-widget { bottom: -9999px; }
@@ -78,6 +90,29 @@
 
 .pwcmb-widget button {
     white-space: nowrap;
+    background-color: var(--col-background);
+    color: var(--col-text);
+    border: var(--col-tertiary) 2px solid;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.pwcmb-widget button:hover {
+    filter: brightness(0.9);
+}
+
+.pwcmb-widget button:active {
+    filter: brightness(0.75);
+}
+
+.pwcmb-widget__row-cb {
+    background-color: var(--col-background);
+    color: var(--col-text);
+    border: var(--col-tertiary) 2px solid;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1.1rem;
 }
 
 .js-pwcmb-notice-toggle {

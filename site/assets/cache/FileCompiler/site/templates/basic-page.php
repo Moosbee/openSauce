@@ -13,7 +13,7 @@
     <!-- <script src="<?php echo $config->urls->templates ?>scripts/live.js"></script> -->
     <script src="<?php echo $config->urls->templates ?>scripts/index.js"></script>
     <script src="<?php echo $config->urls->templates ?>scripts/menu.js"></script>
-    <!-- <script src="<?php echo $config->urls->templates ?>scripts/jquery-3.6.0.min.js"></script> -->
+    <script src="<?php echo $config->urls->templates ?>scripts/jquery-3.6.0.min.js"></script>
 
     <!-- <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/open-sauce-one" type="text/css" /> -->
     <link href="<?php echo $config->urls->templates ?>styles/open-sauce-font.css" rel="stylesheet" type="text/css" />
@@ -116,6 +116,8 @@
         </ul>
     </nav>
     <section>
+
+        <?php echo $page->standart_text;  ?>
 
     </section>
     <footer>

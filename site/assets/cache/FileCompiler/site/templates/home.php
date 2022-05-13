@@ -42,6 +42,11 @@
             <li>
                 <div><a href="<?php echo $config->urls->root ?>">Home</a></div>
             </li>
+            <li>
+                <div>
+                    <a href="#cookies" class="js-pwcmb-notice-toggle">Manage Your Cookies</a>
+                </div>
+            </li>
             <li class="dropdown">
                 <div><a href="">Service</a></div>
                 <ul class="submenu">
@@ -77,7 +82,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <div><a href="">jeruh satu sos</a></div>
+                                <div><a href="">jeruh satu</a></div>
                             </li>
                         </ul>
                     </li>
@@ -137,7 +142,7 @@
         </div>
     </header>
     <section>
-
+        
     </section>
     <footer>
         <p class="footerdark">Copyright © 2022 OpenSause</p>

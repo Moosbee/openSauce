@@ -22,6 +22,7 @@ h1,a{
 body {
     display: flex;
     flex-direction: column;
+background-color: var(--col-background);
 }
 
 header {
