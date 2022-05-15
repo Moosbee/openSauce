@@ -8,3 +8,4 @@
 2022-05-13 16:43:30	admin	http://localhost/opensauce/processwire/page/edit/?id=1	Populated initial created/modified dates for 'slider_images'
 2022-05-13 17:09:29	admin	http://localhost/opensauce/processwire/page/edit/?id=1016	Populated initial created/modified dates for 'standart_single_image'
 2022-05-13 17:09:57	admin	http://localhost/opensauce/processwire/setup/template/removeFields	Deleted field "standart_single_image" data in 0 row(s) from 0 page(s) using template "basic-page". [page-by-page]
+2022-05-15 19:51:36	admin	http://localhost/opensauce/	Populated initial created/modified dates for 'favicon'

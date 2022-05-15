@@ -10,7 +10,7 @@ Slogans:
 
 - die Kunst der Soße
 
-- Soßen Dressing Marinaden
+- Soßen, Dressing, Marinaden
 
 - Foods For Life
 

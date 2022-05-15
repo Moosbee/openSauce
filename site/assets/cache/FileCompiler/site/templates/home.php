@@ -8,7 +8,7 @@
 
     <script src="https://kit.fontawesome.com/18e03e461d.js" crossorigin="anonymous"></script>
 
-    <link rel="shortcut icon" href="<?php echo $config->urls->root ?>favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/footer.css">
 
     <!-- <script src="<?php echo $config->urls->templates ?>scripts/live.js"></script> -->
     <script src="<?php echo $config->urls->templates ?>scripts/index.js"></script>
@@ -22,10 +22,21 @@
     <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/style.css">
     <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/menuestyle.css">
     <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/sliderstyle.css">
-    <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/footer.css">
 
     <title><?php echo ($page->title == "Home" ? "OpenSauce" : $page->title) ?></title>
 
+    <?php
+    $image = $page->favicon;
+    if ($image) {
+        $fav16x16 = $image->getCrop('16x16');
+        $fav32x32 = $image->getCrop('32x32');
+        echo "<link rel='icon' type='image/png' href='$fav16x16->url' sizes='32x32' />";
+        echo "<link rel='icon' type='image/png' href='$fav32x32->url' sizes='16x16' />";
+    } else {
+        echo "<link rel='icon' type='image/png' href='" . $config->urls->root . "favicon-32x32.png' sizes='32x32' />";
+        echo "<link rel='icon' type='image/png' href='" . $config->urls->root . "favicon-16x16.png' sizes='16x16' />";
+    }
+    ?>
 </head>
 
 <body>
@@ -129,7 +140,7 @@
                 if ($page->slider_images && count($page->slider_images)) {
                     foreach ($page->slider_images as $image) {
                         $croped = $image->getCrop('MainSlider');
-                        echo "<img width='1280' height='962' src='$croped->url' alt='Images' class='SliderItems'>";
+                        echo "<div class='SliderItems'><img width='1280' height='962' src='$croped->url' alt='Images' class='SliderItemsImages'><div class='SliderItemsText'>$croped->description</div></div>";
                     }
                 }
                 ?>
@@ -142,8 +153,9 @@
         </div>
     </header>
     <section>
-        
+
     </section>
+
     <footer>
         <p class="footerdark">Copyright © 2022 OpenSause</p>
         <div>

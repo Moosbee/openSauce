@@ -42,6 +42,36 @@ CREATE TABLE IF NOT EXISTS `field_email` (
 ) ENGINE = MyISAM DEFAULT CHARSET = utf8;
 
 # ------------------------------------------------------------
+# SCHEMA DUMP FOR TABLE: field_favicon
+# ------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `field_favicon` (
+  `pages_id` int(10) unsigned NOT NULL,
+  `data` varchar(250) NOT NULL,
+  `sort` int(10) unsigned NOT NULL,
+  `description` text NOT NULL,
+  `modified` datetime DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `filedata` mediumtext DEFAULT NULL,
+  `filesize` int(11) DEFAULT NULL,
+  `created_users_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `modified_users_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `width` int(11) DEFAULT NULL,
+  `height` int(11) DEFAULT NULL,
+  `ratio` decimal(4, 2) DEFAULT NULL,
+  PRIMARY KEY (`pages_id`, `sort`),
+  KEY `data` (`data`),
+  KEY `modified` (`modified`),
+  KEY `created` (`created`),
+  KEY `filesize` (`filesize`),
+  KEY `width` (`width`),
+  KEY `height` (`height`),
+  KEY `ratio` (`ratio`),
+  FULLTEXT KEY `description` (`description`),
+  FULLTEXT KEY `filedata` (`filedata`)
+) ENGINE = MyISAM DEFAULT CHARSET = utf8;
+
+# ------------------------------------------------------------
 # SCHEMA DUMP FOR TABLE: field_pass
 # ------------------------------------------------------------
 
@@ -209,7 +239,7 @@ CREATE TABLE IF NOT EXISTS `fields` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`),
   KEY `type` (`type`)
-) ENGINE = MyISAM AUTO_INCREMENT = 103 DEFAULT CHARSET = utf8;
+) ENGINE = MyISAM AUTO_INCREMENT = 104 DEFAULT CHARSET = utf8;
 
 # ------------------------------------------------------------
 # SCHEMA DUMP FOR TABLE: modules
@@ -399,7 +429,7 @@ INSERT INTO
 VALUES
   (
     'FileCompiler__4a9f9fbce61e8510ca18715082aa351d',
-    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/opensauce\\/site\\/templates\\/home.php\",\"hash\":\"68c414d0903088d273b0a53552b1ef54\",\"size\":7026,\"time\":1652473617,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/opensauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/home.php\",\"hash\":\"68c414d0903088d273b0a53552b1ef54\",\"size\":7026,\"time\":1652473617}}',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/opensauce\\/site\\/templates\\/home.php\",\"hash\":\"da5ffe11d85a0778982ab6b8a0b29f77\",\"size\":7611,\"time\":1652640914,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/opensauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/home.php\",\"hash\":\"da5ffe11d85a0778982ab6b8a0b29f77\",\"size\":7611,\"time\":1652640914}}',
     '2010-04-08 03:10:10'
   );
 INSERT INTO
@@ -466,6 +496,14 @@ VALUES
     '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/opensauce\\/site\\/modules\\/CookieManagementBanner\\/message.tpl.php\",\"hash\":\"89d82e42229a4942497dd1f9127eed71\",\"size\":197,\"time\":1571779843,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/opensauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/modules\\/CookieManagementBanner\\/message.tpl.php\",\"hash\":\"89d82e42229a4942497dd1f9127eed71\",\"size\":197,\"time\":1571779843}}',
     '2010-04-08 03:10:10'
   );
+INSERT INTO
+  `caches` (`name`, `data`, `expires`)
+VALUES
+  (
+    'FileCompiler__4913147065d159d17687ec97952fffaa',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/opensauce\\/site\\/templates\\/footer.php\",\"hash\":\"63d2bf39557d18425c6d34e7f608e609\",\"size\":436,\"time\":1652638185,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/opensauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/footer.php\",\"hash\":\"63d2bf39557d18425c6d34e7f608e609\",\"size\":436,\"time\":1652638185}}',
+    '2010-04-08 03:10:10'
+  );
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: field_admin_theme
@@ -484,6 +522,11 @@ INSERT INTO
   `field_email` (`pages_id`, `data`)
 VALUES
   (41, 'bernhardr91104@gmail.com');
+
+# ------------------------------------------------------------
+# DATA DUMP FOR TABLE: field_favicon
+# ------------------------------------------------------------
+
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: field_pass
@@ -688,42 +731,10 @@ INSERT INTO
 VALUES
   (
     1,
-    'sossen-b.jpg',
-    5,
-    '',
-    '2022-05-13 16:47:12',
-    '2022-05-13 16:47:12',
-    '',
-    667421,
-    41,
-    41,
-    1320,
-    992,
-    1.33
-  );
-INSERT INTO
-  `field_slider_images` (
-    `pages_id`,
-    `data`,
-    `sort`,
-    `description`,
-    `modified`,
-    `created`,
-    `filedata`,
-    `filesize`,
-    `created_users_id`,
-    `modified_users_id`,
-    `width`,
-    `height`,
-    `ratio`
-  )
-VALUES
-  (
-    1,
     'sossen.jpg',
     4,
-    '',
-    '2022-05-13 16:47:12',
+    'Nothing But Delicious!',
+    '2022-05-15 20:51:00',
     '2022-05-13 16:47:12',
     '',
     328017,
@@ -752,74 +763,10 @@ INSERT INTO
 VALUES
   (
     1,
-    '50117118_353918d6c891b5_full.jpg',
-    1,
-    '',
-    '2022-05-13 16:47:12',
-    '2022-05-13 16:47:12',
-    '',
-    67573,
-    41,
-    41,
-    700,
-    465,
-    1.51
-  );
-INSERT INTO
-  `field_slider_images` (
-    `pages_id`,
-    `data`,
-    `sort`,
-    `description`,
-    `modified`,
-    `created`,
-    `filedata`,
-    `filesize`,
-    `created_users_id`,
-    `modified_users_id`,
-    `width`,
-    `height`,
-    `ratio`
-  )
-VALUES
-  (
-    1,
-    'braune-sosse-th.jpg',
-    2,
-    '',
-    '2022-05-13 16:47:12',
-    '2022-05-13 16:47:12',
-    '',
-    48382,
-    41,
-    41,
-    960,
-    540,
-    1.78
-  );
-INSERT INTO
-  `field_slider_images` (
-    `pages_id`,
-    `data`,
-    `sort`,
-    `description`,
-    `modified`,
-    `created`,
-    `filedata`,
-    `filesize`,
-    `created_users_id`,
-    `modified_users_id`,
-    `width`,
-    `height`,
-    `ratio`
-  )
-VALUES
-  (
-    1,
     'kalorienarme-sossen-zum-abnehmen.jpg',
     3,
-    '',
-    '2022-05-13 16:47:12',
+    'Soßen, Dressing, Marinaden',
+    '2022-05-15 20:51:00',
     '2022-05-13 16:47:12',
     '',
     66614,
@@ -848,18 +795,114 @@ INSERT INTO
 VALUES
   (
     1,
+    'braune-sosse-th.jpg',
+    2,
+    'Everyone\'s Favourite Sauce',
+    '2022-05-15 20:51:00',
+    '2022-05-13 16:47:12',
+    '',
+    48382,
+    41,
+    41,
+    960,
+    540,
+    1.78
+  );
+INSERT INTO
+  `field_slider_images` (
+    `pages_id`,
+    `data`,
+    `sort`,
+    `description`,
+    `modified`,
+    `created`,
+    `filedata`,
+    `filesize`,
+    `created_users_id`,
+    `modified_users_id`,
+    `width`,
+    `height`,
+    `ratio`
+  )
+VALUES
+  (
+    1,
+    '50117118_353918d6c891b5_full.jpg',
+    1,
+    'ohne uns schmeckt alles fade',
+    '2022-05-15 20:51:00',
+    '2022-05-13 16:47:12',
+    '',
+    67573,
+    41,
+    41,
+    700,
+    465,
+    1.51
+  );
+INSERT INTO
+  `field_slider_images` (
+    `pages_id`,
+    `data`,
+    `sort`,
+    `description`,
+    `modified`,
+    `created`,
+    `filedata`,
+    `filesize`,
+    `created_users_id`,
+    `modified_users_id`,
+    `width`,
+    `height`,
+    `ratio`
+  )
+VALUES
+  (
+    1,
     '7706.jpg',
     0,
-    '',
+    'Wir bringen Geschmack',
+    '2022-05-15 20:51:00',
     '2022-05-13 16:47:12',
-    '2022-05-13 16:47:12',
-    '',
+    '{\"focus\":{\"top\":51,\"left\":51.4,\"zoom\":0}}',
     98384,
     41,
     41,
     1024,
     612,
     1.67
+  );
+INSERT INTO
+  `field_slider_images` (
+    `pages_id`,
+    `data`,
+    `sort`,
+    `description`,
+    `modified`,
+    `created`,
+    `filedata`,
+    `filesize`,
+    `created_users_id`,
+    `modified_users_id`,
+    `width`,
+    `height`,
+    `ratio`
+  )
+VALUES
+  (
+    1,
+    'sossen-b.jpg',
+    5,
+    'Foods For Life',
+    '2022-05-15 20:51:00',
+    '2022-05-13 16:47:12',
+    '',
+    667421,
+    41,
+    41,
+    1320,
+    992,
+    1.33
   );
 
 # ------------------------------------------------------------
@@ -1184,7 +1227,7 @@ VALUES
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (1, 100, 1, NULL);
+  (1, 103, 1, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
@@ -1192,15 +1235,23 @@ VALUES
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (83, 102, 2, NULL);
+  (83, 101, 2, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (83, 101, 1, NULL);
+  (83, 103, 1, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
   (1, 1, 0, NULL);
+INSERT INTO
+  `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
+VALUES
+  (83, 102, 3, NULL);
+INSERT INTO
+  `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
+VALUES
+  (1, 100, 2, NULL);
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: fields
@@ -1315,6 +1366,17 @@ VALUES
     0,
     'Standart Text',
     '{\"inputfieldClass\":\"InputfieldCKEditor\",\"contentType\":1,\"collapsed\":0,\"minlength\":0,\"maxlength\":0,\"showCount\":0,\"rows\":5,\"toolbar\":\"Format, Styles, -, Bold, Italic, -, RemoveFormat\\nNumberedList, BulletedList, -, Blockquote\\nPWLink, Unlink, Anchor\\nPWImage, Table, HorizontalRule, SpecialChar\\nPasteText, PasteFromWord\\nScayt, -, Sourcedialog\",\"inlineMode\":0,\"useACF\":1,\"usePurifier\":1,\"formatTags\":\"p;h1;h2;h3;h4;h5;h6;pre;address\",\"extraPlugins\":[\"pwimage\",\"pwlink\",\"sourcedialog\"],\"removePlugins\":\"image,magicline\"}'
+  );
+INSERT INTO
+  `fields` (`id`, `type`, `name`, `flags`, `label`, `data`)
+VALUES
+  (
+    103,
+    'FieldtypeCroppableImage3',
+    'favicon',
+    0,
+    'Favicon',
+    '{\"fileSchema\":270,\"extensions\":\"ico gif jpg jpeg png\",\"maxFiles\":1,\"outputFormat\":2,\"descriptionRows\":0,\"useTags\":0,\"gridMode\":\"grid\",\"focusMode\":\"on\",\"maxWidth\":32,\"maxHeight\":32,\"resizeServer\":0,\"clientQuality\":90,\"minWidth\":16,\"minHeight\":16,\"cropSetting\":\"32x32,32,32\\n16x16,16,16\",\"defaultValuePage\":0,\"inputfieldClass\":\"InputfieldCroppableImage3\",\"collapsed\":0}'
   );
 
 # ------------------------------------------------------------
@@ -2029,7 +2091,7 @@ VALUES
     1,
     'home',
     9,
-    '2022-05-13 21:00:14',
+    '2022-05-15 20:51:00',
     41,
     '2022-04-20 15:06:07',
     2,
@@ -3233,7 +3295,7 @@ VALUES
     29,
     'salat-dressing',
     1,
-    '2022-05-04 15:06:27',
+    '2022-05-15 20:19:26',
     41,
     '2022-05-04 15:06:27',
     41,
@@ -3679,7 +3741,7 @@ VALUES
 INSERT INTO
   `session_login_throttle` (`name`, `attempts`, `last_attempt`)
 VALUES
-  ('admin', 1, 1652382451);
+  ('admin', 1, 1652635755);
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: templates
@@ -3773,7 +3835,7 @@ VALUES
     1,
     0,
     0,
-    '{\"useRoles\":1,\"noParents\":1,\"slashUrls\":1,\"compile\":3,\"modified\":1652473617,\"ns\":\"\\\\\",\"roles\":[37]}'
+    '{\"useRoles\":1,\"noParents\":1,\"slashUrls\":1,\"compile\":3,\"modified\":1652640914,\"ns\":\"\\\\\",\"roles\":[37]}'
   );
 INSERT INTO
   `templates` (
@@ -3791,7 +3853,7 @@ VALUES
     83,
     0,
     0,
-    '{\"slashUrls\":1,\"compile\":3,\"modified\":1652480175,\"ns\":\"\\\\\"}'
+    '{\"slashUrls\":1,\"compile\":3,\"modified\":1652637652,\"ns\":\"\\\\\"}'
   );
 
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
