@@ -405,7 +405,7 @@ INSERT INTO
 VALUES
   (
     'FileCompiler__a00a54d9a295494ebe10b695958f576b',
-    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/templates\\/home.php\",\"hash\":\"2b363956e816cbf5c16de873632c9623\",\"size\":8676,\"time\":1652360342,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/home.php\",\"hash\":\"2b363956e816cbf5c16de873632c9623\",\"size\":8676,\"time\":1652360342}}',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/templates\\/home.php\",\"hash\":\"da5ffe11d85a0778982ab6b8a0b29f77\",\"size\":7611,\"time\":1652672862,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/home.php\",\"hash\":\"da5ffe11d85a0778982ab6b8a0b29f77\",\"size\":7611,\"time\":1652672862}}',
     '2010-04-08 03:10:10'
   );
 INSERT INTO
@@ -413,7 +413,7 @@ INSERT INTO
 VALUES
   (
     'FileCompiler__6abee2988f5d12d0c13b7e051f679567',
-    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/templates\\/basic-page.php\",\"hash\":\"db5828c7dd5a5123c7963c0fb016f7a7\",\"size\":419,\"time\":1630086528,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/basic-page.php\",\"hash\":\"db5828c7dd5a5123c7963c0fb016f7a7\",\"size\":419,\"time\":1630086528}}',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/templates\\/basic-page.php\",\"hash\":\"117c1b00334a7728de9aaa752412e5fb\",\"size\":6258,\"time\":1652690869,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/basic-page.php\",\"hash\":\"117c1b00334a7728de9aaa752412e5fb\",\"size\":6258,\"time\":1652690869}}',
     '2010-04-08 03:10:10'
   );
 INSERT INTO
@@ -502,6 +502,54 @@ VALUES
   (
     'FileCompiler__4913147065d159d17687ec97952fffaa',
     '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/opensauce\\/site\\/templates\\/footer.php\",\"hash\":\"63d2bf39557d18425c6d34e7f608e609\",\"size\":436,\"time\":1652638185,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/opensauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/footer.php\",\"hash\":\"63d2bf39557d18425c6d34e7f608e609\",\"size\":436,\"time\":1652638185}}',
+    '2010-04-08 03:10:10'
+  );
+INSERT INTO
+  `caches` (`name`, `data`, `expires`)
+VALUES
+  (
+    'FileCompiler__cece63e89cd0bb652d54c6dc36a2e4e0',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/modules\\/CookieManagementBanner\\/CookieManagementBanner.module.php\",\"hash\":\"f63198f056ad98b73e2e8c284b85b20e\",\"size\":8627,\"time\":1652672862,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/modules\\/CookieManagementBanner\\/CookieManagementBanner.module.php\",\"hash\":\"d73c382d0345e10cb9c791bd2da416af\",\"size\":8838,\"time\":1652672862}}',
+    '2010-04-08 03:10:10'
+  );
+INSERT INTO
+  `caches` (`name`, `data`, `expires`)
+VALUES
+  (
+    'FileCompiler__86f2d40e9d76770add48e201b6cb2111',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/modules\\/CookieManagementBanner\\/CookieManagementBanner.config.php\",\"hash\":\"81d9c948dfd452ccf8a9d20991151e41\",\"size\":10952,\"time\":1652672862,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/modules\\/CookieManagementBanner\\/CookieManagementBanner.config.php\",\"hash\":\"2398b3a1e5b4ebe541119053b4c8ae95\",\"size\":11628,\"time\":1652672862}}',
+    '2010-04-08 03:10:10'
+  );
+INSERT INTO
+  `caches` (`name`, `data`, `expires`)
+VALUES
+  (
+    'FileCompiler__a2b2288eff974fe220e09287ac412e14',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/modules\\/CookieManagementBanner\\/wrapper.tpl.php\",\"hash\":\"45b00d17cc55edb375aebfe97c77e0e8\",\"size\":432,\"time\":1652672862,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/modules\\/CookieManagementBanner\\/wrapper.tpl.php\",\"hash\":\"df45c53b5f73e2feafda1fbe125d3b70\",\"size\":795,\"time\":1652672862}}',
+    '2010-04-08 03:10:10'
+  );
+INSERT INTO
+  `caches` (`name`, `data`, `expires`)
+VALUES
+  (
+    'FileCompiler__84e11003bf81a4a92bace5332cd68011',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/modules\\/CookieManagementBanner\\/notice.tpl.php\",\"hash\":\"03bd17d480a15abd68d6d63eb3bf1735\",\"size\":997,\"time\":1652672862,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/modules\\/CookieManagementBanner\\/notice.tpl.php\",\"hash\":\"03bd17d480a15abd68d6d63eb3bf1735\",\"size\":997,\"time\":1652672862}}',
+    '2010-04-08 03:10:10'
+  );
+INSERT INTO
+  `caches` (`name`, `data`, `expires`)
+VALUES
+  (
+    'FileCompiler__aafa758a03b0b7c109ed431dcbe51153',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/modules\\/CookieManagementBanner\\/manage.tpl.php\",\"hash\":\"02d8eaa4716acb63c9538b6d9328dda1\",\"size\":1608,\"time\":1652672862,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/modules\\/CookieManagementBanner\\/manage.tpl.php\",\"hash\":\"02d8eaa4716acb63c9538b6d9328dda1\",\"size\":1608,\"time\":1652672862}}',
+    '2010-04-08 03:10:10'
+  );
+INSERT INTO
+  `caches` (`name`, `data`, `expires`)
+VALUES
+  (
+    'FileCompiler__79f6f3a418a66977736e7d8236b8af9a',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/modules\\/CookieManagementBanner\\/message.tpl.php\",\"hash\":\"a7763e187c61eae1a67fb0a831c56860\",\"size\":202,\"time\":1652672862,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/modules\\/CookieManagementBanner\\/message.tpl.php\",\"hash\":\"a7763e187c61eae1a67fb0a831c56860\",\"size\":202,\"time\":1652672862}}',
     '2010-04-08 03:10:10'
   );
 
@@ -3741,7 +3789,7 @@ VALUES
 INSERT INTO
   `session_login_throttle` (`name`, `attempts`, `last_attempt`)
 VALUES
-  ('admin', 1, 1652635755);
+  ('admin', 1, 1652673164);
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: templates
@@ -3835,7 +3883,7 @@ VALUES
     1,
     0,
     0,
-    '{\"useRoles\":1,\"noParents\":1,\"slashUrls\":1,\"compile\":3,\"modified\":1652640914,\"ns\":\"\\\\\",\"roles\":[37]}'
+    '{\"useRoles\":1,\"noParents\":1,\"slashUrls\":1,\"compile\":3,\"modified\":1652672862,\"ns\":\"\\\\\",\"roles\":[37]}'
   );
 INSERT INTO
   `templates` (
@@ -3853,7 +3901,7 @@ VALUES
     83,
     0,
     0,
-    '{\"slashUrls\":1,\"compile\":3,\"modified\":1652637652,\"ns\":\"\\\\\"}'
+    '{\"slashUrls\":1,\"compile\":3,\"modified\":1652690869,\"ns\":\"\\\\\"}'
   );
 
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

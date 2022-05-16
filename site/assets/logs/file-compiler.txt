@@ -15,3 +15,7 @@
 2022-05-15 20:08:31	admin	http://localhost/opensauce/	Compiled file: /site/templates/home.php
 2022-05-15 20:09:15	admin	http://localhost/opensauce/	Compiled file: /site/templates/home.php
 2022-05-15 20:09:45	admin	http://localhost/opensauce/	Compiled file: /site/templates/home.php
+2022-05-16 05:48:48	?	?	Compiled file: /site/modules/CookieManagementBanner/CookieManagementBanner.module.php
+2022-05-16 05:48:48	guest	http://localhost/opensauce/	Compiled file: /site/modules/CookieManagementBanner/CookieManagementBanner.config.php
+2022-05-16 05:48:49	guest	http://localhost/openSauce/	Compiled file: /site/modules/CookieManagementBanner/wrapper.tpl.php
+2022-05-16 05:48:49	guest	http://localhost/openSauce/	Maintenance/Remove target file: /site/assets/cache/FileCompiler/site/templates/footer.php

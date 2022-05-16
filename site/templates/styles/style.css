@@ -1,7 +1,7 @@
 :root {
     --col-primary: #65211F;
     --col-secondary: #EE964B;
-    --col-tertiary:#4F5D2F;
+    --col-tertiary: #4F5D2F;
     --col-background: #D4F4DD;
     --col-text: #0C0A3E;
 }
@@ -15,14 +15,15 @@
     font-family: 'OpenSauceOneRegular';
 }
 
-h1,a{
-    color:var(--col-text)
+h1,
+a {
+    color: var(--col-text)
 }
 
 body {
     display: flex;
     flex-direction: column;
-background-color: var(--col-background);
+    background-color: white;
 }
 
 header {
@@ -35,6 +36,14 @@ nav {
 
 section {
     background-color: var(--col-background);
+    margin-inline: auto;
+    padding-block: 1rem;
+    width: calc(100% - 3rem);
+    max-width: 70rem;
+
+    box-shadow: 2px 0px 5px 7px rgba(0, 0, 0, 0.56);
+    -webkit-box-shadow: 2px 0px 5px 7px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow: 2px 0px 5px 7px rgba(0, 0, 0, 0.56);
 }
 
 
@@ -45,33 +54,12 @@ section {
     display: grid;
 }
 
-@media (min-width: 1200px) {
-    section {
-        grid-template-columns: auto auto auto auto auto;
-    }
-}
+@media (min-width: 1200px) {}
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {}
 
-    section {
-        grid-template-columns: auto auto auto auto;
-    }
-}
+@media (min-width: 768px) and (max-width: 991.98px) {}
 
-@media (min-width: 768px) and (max-width: 991.98px) {
-    section {
-        grid-template-columns: auto auto auto;
-    }
-}
+@media (min-width: 576px) and (max-width: 767.98px) {}
 
-@media (min-width: 576px) and (max-width: 767.98px) {
-    section {
-        grid-template-columns: auto auto;
-    }
-}
-
-@media (max-width: 575.98px) {
-    section {
-        grid-template-columns: auto;
-    }
-}
+@media (max-width: 575.98px) {}
