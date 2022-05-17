@@ -10,7 +10,7 @@
   --col-nav-text: var(--col-secondary);
 }
 
-@media (min-width: 576px) {
+@media (min-width: 1000px) {
   nav {
     display: flex;
     justify-content: space-around;
@@ -109,6 +109,109 @@
 
   .menuicon {
     height: 2.3rem;
+  }
+
+  .mobilemenu {
+    display: contents;
+  }
+
+  .Titel {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 999.98px){
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .menu {
+    /* display: block; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    /* display: contents; */
+  }
+
+  .submenu {
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    left: 0px;
+    list-style-type: none;
+    display: block;
+    min-width: 125px;
+    width: max-content;
+    z-index: 9;
+  }
+
+  .menuicon{
+    height: 5rem;
+    padding: 0.6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .menu .submenu .submenu {
+    position: absolute;
+    left: 100px;
+    top: 0px;
+  }
+
+  .menu .submenu {
+    display: none;
+  }
+
+  .menu li {
+    position: relative;
+    background-color: var(--col-nav-background);
+    /* width: min-content; */
+  }
+
+  .menu li a:hover {
+    filter: brightness(0.8);
+  }
+
+  .menu li.dropdown:hover > .submenu {
+    display: block;
+  }
+
+  .menu li div {
+    display: block;
+  }
+
+  .submenu li {
+    display: block;
+    box-shadow: 10px 11px 5px 0px rgba(12, 10, 62, 0.49);
+    -webkit-box-shadow: 10px 11px 5px 0px rgba(12, 10, 62, 0.49);
+    -moz-box-shadow: 10px 11px 5px 0px rgba(12, 10, 62, 0.49);
+  }
+
+  .submenu li div {
+    display: block;
+  }
+
+  .menu .submenu > li.dropdown:hover > .submenu {
+    display: block;
+  }
+
+  .menu li.dropdown > div a::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: " \f0d7";
+  }
+
+  .submenu li.dropdown > div a::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: " \f0da";
+  }
+
+  #openClose {
+    display: none;
   }
 
   .mobilemenu {
