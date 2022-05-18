@@ -9,3 +9,6 @@
 2022-05-13 17:09:29	admin	http://localhost/opensauce/processwire/page/edit/?id=1016	Populated initial created/modified dates for 'standart_single_image'
 2022-05-13 17:09:57	admin	http://localhost/opensauce/processwire/setup/template/removeFields	Deleted field "standart_single_image" data in 0 row(s) from 0 page(s) using template "basic-page". [page-by-page]
 2022-05-15 19:51:36	admin	http://localhost/opensauce/	Populated initial created/modified dates for 'favicon'
+2022-05-18 12:47:56	admin	http://localhost/openSauce/processwire/setup/template/removeFields	Deleted field "zitat" data in 0 row(s) from 0 page(s) using template "home". [page-by-page]
+2022-05-18 12:47:56	admin	http://localhost/openSauce/processwire/setup/template/removeFields	Deleted field "zitat_END" data in 0 row(s) from 0 page(s) using template "home". [page-by-page]
+2022-05-18 13:36:12	admin	http://localhost/openSauce/processwire/setup/field/save?id=112	Deleted field "textbox" data in 0 row(s) from 0 page(s) using template "repeater_home_page_text". [page-by-page] (Fields)

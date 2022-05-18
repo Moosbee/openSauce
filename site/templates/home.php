@@ -153,7 +153,7 @@
         </div>
     </header>
     <section>
-
+        <?php echo $page->standart_text;  ?>
     </section>
 
     <footer>

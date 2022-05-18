@@ -58,6 +58,7 @@
 
   .menu > li {
     order: 0;
+    margin: 0.5rem;
   }
 
   .menu > li:nth-child(2n) {

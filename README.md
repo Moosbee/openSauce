@@ -36,6 +36,12 @@ Extra Farben:
 
 - #0C0A3E
 
+
+Import Database
+```
 cd database-synch
+npm install
+npm run import
+```
 
 Proccesswire admin:123456
