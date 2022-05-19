@@ -1,0 +1,28 @@
+:root {
+    --col-primary: #65211F;
+    --col-secondary: #EE964B;
+    --col-tertiary: #4F5D2F;
+    --col-background: #D4F4DD;
+    --col-text: #0C0A3E;
+}
+
+.zitat {}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(50% - 1rem);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--col-primary);
+}
+
+.cardimage {
+    position: relative;
+    width: 100%;
+    padding: 100%;
+}

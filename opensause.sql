@@ -72,6 +72,36 @@ CREATE TABLE IF NOT EXISTS `field_favicon` (
 ) ENGINE = MyISAM DEFAULT CHARSET = utf8;
 
 # ------------------------------------------------------------
+# SCHEMA DUMP FOR TABLE: field_home_page_images
+# ------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `field_home_page_images` (
+  `pages_id` int(10) unsigned NOT NULL,
+  `data` varchar(250) NOT NULL,
+  `sort` int(10) unsigned NOT NULL,
+  `description` text NOT NULL,
+  `modified` datetime DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `filedata` mediumtext DEFAULT NULL,
+  `filesize` int(11) DEFAULT NULL,
+  `created_users_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `modified_users_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `width` int(11) DEFAULT NULL,
+  `height` int(11) DEFAULT NULL,
+  `ratio` decimal(4, 2) DEFAULT NULL,
+  PRIMARY KEY (`pages_id`, `sort`),
+  KEY `data` (`data`),
+  KEY `modified` (`modified`),
+  KEY `created` (`created`),
+  KEY `filesize` (`filesize`),
+  KEY `width` (`width`),
+  KEY `height` (`height`),
+  KEY `ratio` (`ratio`),
+  FULLTEXT KEY `description` (`description`),
+  FULLTEXT KEY `filedata` (`filedata`)
+) ENGINE = MyISAM DEFAULT CHARSET = utf8;
+
+# ------------------------------------------------------------
 # SCHEMA DUMP FOR TABLE: field_home_page_text
 # ------------------------------------------------------------
 
@@ -84,6 +114,18 @@ CREATE TABLE IF NOT EXISTS `field_home_page_text` (
   KEY `data_exact` (`data`(1)),
   KEY `count` (`count`, `pages_id`),
   KEY `parent_id` (`parent_id`, `pages_id`),
+  FULLTEXT KEY `data` (`data`)
+) ENGINE = MyISAM DEFAULT CHARSET = utf8;
+
+# ------------------------------------------------------------
+# SCHEMA DUMP FOR TABLE: field_home_page_text_title
+# ------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `field_home_page_text_title` (
+  `pages_id` int(10) unsigned NOT NULL,
+  `data` text NOT NULL,
+  PRIMARY KEY (`pages_id`),
+  KEY `data_exact` (`data`(250)),
   FULLTEXT KEY `data` (`data`)
 ) ENGINE = MyISAM DEFAULT CHARSET = utf8;
 
@@ -337,7 +379,7 @@ CREATE TABLE IF NOT EXISTS `fields` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`),
   KEY `type` (`type`)
-) ENGINE = MyISAM AUTO_INCREMENT = 115 DEFAULT CHARSET = utf8;
+) ENGINE = MyISAM AUTO_INCREMENT = 117 DEFAULT CHARSET = utf8;
 
 # ------------------------------------------------------------
 # SCHEMA DUMP FOR TABLE: modules
@@ -495,7 +537,7 @@ INSERT INTO
 VALUES
   (
     'FileCompiler__a00a54d9a295494ebe10b695958f576b',
-    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/templates\\/home.php\",\"hash\":\"a868e0deb8f0e32bddc59c189895d5ce\",\"size\":7655,\"time\":1652856211,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/home.php\",\"hash\":\"a868e0deb8f0e32bddc59c189895d5ce\",\"size\":7655,\"time\":1652856211}}',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/templates\\/home.php\",\"hash\":\"2dccaff0215d60d905a04b1d5c6e5f4d\",\"size\":8767,\"time\":1652970601,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/home.php\",\"hash\":\"2dccaff0215d60d905a04b1d5c6e5f4d\",\"size\":8767,\"time\":1652970601}}',
     '2010-04-08 03:10:10'
   );
 INSERT INTO
@@ -675,6 +717,75 @@ VALUES
 
 
 # ------------------------------------------------------------
+# DATA DUMP FOR TABLE: field_home_page_images
+# ------------------------------------------------------------
+
+INSERT INTO
+  `field_home_page_images` (
+    `pages_id`,
+    `data`,
+    `sort`,
+    `description`,
+    `modified`,
+    `created`,
+    `filedata`,
+    `filesize`,
+    `created_users_id`,
+    `modified_users_id`,
+    `width`,
+    `height`,
+    `ratio`
+  )
+VALUES
+  (
+    1031,
+    'bbq-sauce-barbecue-sosse-colourbox17890425.jpg',
+    0,
+    'My bad',
+    '2022-05-19 15:20:58',
+    '2022-05-19 15:20:58',
+    '',
+    111254,
+    41,
+    41,
+    1500,
+    1500,
+    1.00
+  );
+INSERT INTO
+  `field_home_page_images` (
+    `pages_id`,
+    `data`,
+    `sort`,
+    `description`,
+    `modified`,
+    `created`,
+    `filedata`,
+    `filesize`,
+    `created_users_id`,
+    `modified_users_id`,
+    `width`,
+    `height`,
+    `ratio`
+  )
+VALUES
+  (
+    1032,
+    'toy-car-aerial-view-vector-set.jpg',
+    0,
+    '',
+    '2022-05-19 15:20:58',
+    '2022-05-19 15:20:58',
+    '',
+    210295,
+    41,
+    41,
+    1400,
+    980,
+    1.43
+  );
+
+# ------------------------------------------------------------
 # DATA DUMP FOR TABLE: field_home_page_text
 # ------------------------------------------------------------
 
@@ -682,6 +793,19 @@ INSERT INTO
   `field_home_page_text` (`pages_id`, `data`, `count`, `parent_id`)
 VALUES
   (1, '1031,1032', 2, 1030);
+
+# ------------------------------------------------------------
+# DATA DUMP FOR TABLE: field_home_page_text_title
+# ------------------------------------------------------------
+
+INSERT INTO
+  `field_home_page_text_title` (`pages_id`, `data`)
+VALUES
+  (1031, 'Wir wissen was sie wollen');
+INSERT INTO
+  `field_home_page_text_title` (`pages_id`, `data`)
+VALUES
+  (1032, 'Unser Betrieb steht seit 2022');
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: field_pass
@@ -752,7 +876,7 @@ VALUES
 INSERT INTO
   `field_phits` (`pages_id`, `data`, `last_hit`)
 VALUES
-  (1, 1, '2022-05-18 13:12:17');
+  (1, 5, '2022-05-19 16:29:21');
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: field_process
@@ -1120,11 +1244,14 @@ VALUES
 INSERT INTO
   `field_standart_text` (`pages_id`, `data`)
 VALUES
-  (1031, '<p>Wir wissen was wier tun</p>');
+  (1031, '<p>Wir wissen was wir hier tun</p>');
 INSERT INTO
   `field_standart_text` (`pages_id`, `data`)
 VALUES
-  (1032, '<p>das ist leben</p>');
+  (
+    1032,
+    '<p>Dieser Betrieb funktioniert schon ein gesamtes Jahr lang mäßig gut.</p>'
+  );
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: field_textbox
@@ -1456,7 +1583,7 @@ VALUES
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (1, 111, 9, NULL);
+  (98, 102, 1, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
@@ -1472,7 +1599,7 @@ VALUES
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (1, 108, 8, NULL);
+  (1, 112, 9, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
@@ -1480,35 +1607,35 @@ VALUES
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (1, 110, 7, NULL);
+  (1, 101, 8, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (1, 109, 6, NULL);
+  (1, 108, 7, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (1, 107, 5, NULL);
+  (1, 110, 6, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (1, 102, 4, NULL);
+  (1, 109, 5, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (1, 101, 3, NULL);
+  (1, 107, 4, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (1, 100, 2, NULL);
+  (1, 100, 3, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (1, 103, 1, NULL);
+  (1, 103, 2, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (1, 1, 0, NULL);
+  (1, 1, 1, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
@@ -1516,11 +1643,15 @@ VALUES
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (98, 102, 0, NULL);
+  (98, 115, 0, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (1, 112, 10, NULL);
+  (1, 111, 0, NULL);
+INSERT INTO
+  `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
+VALUES
+  (98, 116, 2, NULL);
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: fields
@@ -1700,7 +1831,7 @@ VALUES
     'phits',
     0,
     'Page hits',
-    '{\"collapsed\":4,\"tags\":\"-pagehits\",\"icon\":\"eye\"}'
+    '{\"collapsed\":0,\"tags\":\"-pagehits\",\"icon\":\"eye\"}'
   );
 INSERT INTO
   `fields` (`id`, `type`, `name`, `flags`, `label`, `data`)
@@ -1711,7 +1842,7 @@ VALUES
     'home_page_text',
     0,
     'Home Page Text',
-    '{\"template_id\":44,\"parent_id\":1029,\"repeaterCollapse\":0,\"repeaterLoading\":1,\"familyFriendly\":0,\"repeaterFields\":{\"1\":102},\"collapsed\":0}'
+    '{\"template_id\":44,\"parent_id\":1029,\"repeaterCollapse\":0,\"repeaterLoading\":1,\"familyFriendly\":0,\"repeaterFields\":[115,102,116],\"tags\":\"home_page_text\",\"repeaterMaxItems\":20,\"collapsed\":0}'
   );
 INSERT INTO
   `fields` (`id`, `type`, `name`, `flags`, `label`, `data`)
@@ -1728,6 +1859,28 @@ INSERT INTO
   `fields` (`id`, `type`, `name`, `flags`, `label`, `data`)
 VALUES
   (114, 'FieldtypeText', 'textt', 0, 'Textt', '');
+INSERT INTO
+  `fields` (`id`, `type`, `name`, `flags`, `label`, `data`)
+VALUES
+  (
+    115,
+    'FieldtypeText',
+    'home_page_text_title',
+    0,
+    'home page text title',
+    '{\"textformatters\":[\"TextformatterEntities\"],\"minlength\":0,\"maxlength\":2048,\"showCount\":1,\"size\":0,\"stripTags\":1,\"tags\":\"home_page_text\"}'
+  );
+INSERT INTO
+  `fields` (`id`, `type`, `name`, `flags`, `label`, `data`)
+VALUES
+  (
+    116,
+    'FieldtypeCroppableImage3',
+    'home_page_images',
+    0,
+    'Home Page Images',
+    '{\"fileSchema\":270,\"textformatters\":[\"TextformatterEntities\"],\"extensions\":\"gif jpg jpeg png\",\"maxFiles\":4,\"outputFormat\":2,\"descriptionRows\":1,\"useTags\":0,\"gridMode\":\"grid\",\"focusMode\":\"on\",\"resizeServer\":0,\"clientQuality\":90,\"maxReject\":0,\"dimensionsByAspectRatio\":0,\"defaultValuePage\":0,\"inputfieldClass\":\"InputfieldCroppableImage3\",\"tags\":\"home_page_text\",\"collapsed\":0,\"cropSetting\":\"page,1200,800\"}'
+  );
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: modules
@@ -2491,7 +2644,7 @@ VALUES
     1,
     'home',
     9,
-    '2022-05-18 13:40:48',
+    '2022-05-19 15:22:31',
     41,
     '2022-04-20 15:06:07',
     2,
@@ -4087,12 +4240,12 @@ VALUES
     44,
     '1652873727-2169-1',
     1,
-    '2022-05-18 13:40:48',
+    '2022-05-19 15:22:31',
     41,
     '2022-05-18 13:35:27',
     41,
     '2022-05-18 13:40:48',
-    2
+    0
   );
 INSERT INTO
   `pages` (
@@ -4115,12 +4268,12 @@ VALUES
     44,
     '1652873728-6004-1',
     1,
-    '2022-05-18 13:40:48',
+    '2022-05-19 15:20:58',
     41,
     '2022-05-18 13:35:28',
     41,
     '2022-05-18 13:40:48',
-    3
+    1
   );
 
 # ------------------------------------------------------------
@@ -4313,7 +4466,7 @@ VALUES
 INSERT INTO
   `session_login_throttle` (`name`, `attempts`, `last_attempt`)
 VALUES
-  ('admin', 1, 1652866791);
+  ('admin', 1, 1652962861);
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: templates
@@ -4407,7 +4560,7 @@ VALUES
     1,
     0,
     0,
-    '{\"useRoles\":1,\"noParents\":1,\"slashUrls\":1,\"compile\":3,\"modified\":1652873711,\"ns\":\"\\\\\",\"roles\":[37]}'
+    '{\"useRoles\":1,\"noParents\":1,\"slashUrls\":1,\"compile\":3,\"modified\":1652970601,\"ns\":\"\\\\\",\"roles\":[37]}'
   );
 INSERT INTO
   `templates` (

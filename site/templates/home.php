@@ -22,8 +22,9 @@
     <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/style.css">
     <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/menuestyle.css">
     <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/sliderstyle.css">
+    <link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/homepage.css">
 
-    <title><?php echo ($page->title == "Home" ? "OpenSauce" : $page->title) ?></title>
+    <title><?php echo ($page->title == "Home" ? "OpenSauce" : $page->title) ?> <?php echo $page->phits; ?> Views</title>
 
     <?php
     $image = $page->favicon;
@@ -153,7 +154,33 @@
         </div>
     </header>
     <section>
-        <?php echo $page->standart_text;  ?>
+        <div class="zitat">
+            <q>
+                <?php echo $page->zitat_text;  ?>
+            </q>
+            <b>
+                <?php echo $page->zitat_name;  ?>
+            </b>
+        </div>
+        <div class="cards">
+
+            <?php
+            if (count($page->home_page_text)) {
+                foreach ($page->home_page_text as $page_text) {
+                    echo "<div class='card'>";
+                    $image = $page_text->home_page_images;
+                    if ($image) {
+                        $thumb = $image->getCrop("page");
+                        echo "<a class='cardimage' href='$image->url'><img style='width: 100%;height: 100%;' width='1200' height='800' src='$thumb->url' alt='$image->description'></a>";
+                    }
+                    echo "<h2>$page_text->home_page_text_title</h2>";
+                    echo "<p>$page_text->standart_text</p>";
+                    echo "</div>";
+                }
+            }
+            ?>
+        </div>
+
     </section>
 
     <footer>

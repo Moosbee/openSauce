@@ -19,3 +19,4 @@
 2022-05-16 05:48:48	guest	http://localhost/opensauce/	Compiled file: /site/modules/CookieManagementBanner/CookieManagementBanner.config.php
 2022-05-16 05:48:49	guest	http://localhost/openSauce/	Compiled file: /site/modules/CookieManagementBanner/wrapper.tpl.php
 2022-05-16 05:48:49	guest	http://localhost/openSauce/	Maintenance/Remove target file: /site/assets/cache/FileCompiler/site/templates/footer.php
+2022-05-19 14:20:40	guest	http://localhost/openSauce/	Maintenance/Copy new version of source file to target file: /site/templates/basic-page.php => /site/assets/cache/FileCompiler/site/templates/basic-page.php
