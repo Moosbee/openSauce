@@ -22,7 +22,7 @@ Schrift [Open Sauce One](https://fontlibrary.org/en/font/open-sauce-one)
 
 `<link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/open-sauce-one" type="text/css"/>`
 
-Webseiten beispiel https://pixelgrade.com/themes/pile/preview/?market_ref=envato
+Webseiten beispiel https://pixelgrade.com/themes/pile/preview/?market_ref=envato https://www.kolping-dornbirn.at/
 
 **Primärfarbe:**#65211F
 
