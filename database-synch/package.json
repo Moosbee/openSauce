@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "import":"node import.js",
-    "export":"node export.js"
+    "import": "node import.js",
+    "export": "node export.js"
   },
   "author": "",
   "license": "ISC",
