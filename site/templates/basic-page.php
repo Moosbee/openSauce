@@ -37,113 +37,17 @@
 </head>
 
 <body>
-    <nav>
-        <div class="mobilemenu">
-            <a class="menuicon" href="<?php echo $config->urls->root ?>"><img class="logo" src="<?php echo $config->urls->templates ?>images/logo1.png" alt="Logo" srcset=""></a>
-            <h1 class="Titel"><?php echo ($page->title == "Home" ? "OpenSauce" : $page->title) ?></h1>
-            <button id="openClose">
-                <div class="fas fa-align-justify small switchIcon"></div>
-                <div class="fas fa-times small switchIcon start"></div>
-            </button>
-        </div>
-        <ul class="menu hidefon">
-            <li>
-                <div><a href="<?php echo $config->urls->root ?>">Home</a></div>
-            </li>
-            <li>
-                <div>
-                    <a href="#cookies" class="js-pwcmb-notice-toggle">Manage Your Cookies</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <div><a href="">Service</a></div>
-                <ul class="submenu">
-                    <li>
-                        <div> <a href="">satu</a></div>
-                    </li>
-                    <li class="dropdown">
-                        <div><a href="">dua</a></div>
-                        <ul class="submenu">
-                            <li class="dropdown">
-                                <div> <a href="">jeruh dua</a></div>
-                                <ul class="submenu">
-                                    <li>
-                                        <div> <a href="">mentok satu</a></div>
-                                    </li>
-                                    <li class="dropdown">
-                                        <div><a href="">mentok dua</a></div>
-                                        <ul class="submenu">
-                                            <li>
-                                                <div> <a href="">njedok prend satu</a></div>
-                                            </li>
-                                            <li>
-                                                <div><a href="">njedok prend dua</a></div>
-                                            </li>
-                                            <li>
-                                                <div><a href="">njedok prend tiga</a></div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <div><a href="">mentok satu</a></div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <div><a href="">jeruh satu</a></div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <?php
-            $homepage = $pages->get("/");
-
-            function echoChild($child)
-            {
-                echo "<li>";
-                echoLink($child);
-                echo "</li>";
-            }
-            function echoLink($child)
-            {
-                echo "<div><a href='$child->url'>$child->title</a></div>";
-            }
-
-            function echoChildren($childs)
-            {
-                foreach ($childs as $child) {
-
-                    if ($child->hasChildren()) {
-                        echo '<li class="dropdown">';
-                        echoLink($child);
-                        echo '<ul class="submenu">';
-                        echoChildren($child->children());
-                        echo "</ul></li>";
-                    } else {
-                        echoChild($child);
-                    }
-                }
-            }
-
-            echoChildren($homepage->children());
-            ?>
-        </ul>
-    </nav>
-    <section>
+    <?php
+    include("./menu.php");
+    ?>
+    <main>
 
         <?php echo $page->standart_text;  ?>
 
-    </section>
-    <footer>
-        <p class="footerdark">Copyright © 2022 OpenSause</p>
-        <div>
-            <a href="<?php echo $config->urls->root ?>/about-us/legal-stuff">Legal Stuff</a>
-            <a class="footerdark" href="<?php echo ($page->editable() ? $page->editURL : "#") ?>"><?php echo ($page->editable() ? "Edit" : "|") ?></a>
-            <a href="<?php echo $config->urls->root ?>/about-us/privacy-policy/">Privacy Policy</a>
-        </div>
-    </footer>
-
+    </main>
+    <?php
+    include("./footer.php");
+    ?>
 </body>
 
 </html>

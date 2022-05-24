@@ -41,99 +41,9 @@
 </head>
 
 <body>
-    <nav>
-        <div class="mobilemenu">
-            <a class="menuicon" href="<?php echo $config->urls->root ?>"><img class="logo" src="<?php echo $config->urls->templates ?>images/logo1.png" alt="Logo" srcset=""></a>
-            <h1 class="Titel"><?php echo ($page->title == "Home" ? "OpenSauce" : $page->title) ?></h1>
-            <button id="openClose">
-                <div class="fas fa-align-justify small switchIcon"></div>
-                <div class="fas fa-times small switchIcon start"></div>
-            </button>
-        </div>
-        <ul class="menu hidefon">
-            <li>
-                <div><a href="<?php echo $config->urls->root ?>">Home</a></div>
-            </li>
-            <li>
-                <div>
-                    <a href="#cookies" class="js-pwcmb-notice-toggle">Manage Your Cookies</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <div><a href="">Service</a></div>
-                <ul class="submenu">
-                    <li>
-                        <div> <a href="">satu</a></div>
-                    </li>
-                    <li class="dropdown">
-                        <div><a href="">dua</a></div>
-                        <ul class="submenu">
-                            <li class="dropdown">
-                                <div> <a href="">jeruh dua</a></div>
-                                <ul class="submenu">
-                                    <li>
-                                        <div> <a href="">mentok satu</a></div>
-                                    </li>
-                                    <li class="dropdown">
-                                        <div><a href="">mentok dua</a></div>
-                                        <ul class="submenu">
-                                            <li>
-                                                <div> <a href="">njedok prend satu</a></div>
-                                            </li>
-                                            <li>
-                                                <div><a href="">njedok prend dua</a></div>
-                                            </li>
-                                            <li>
-                                                <div><a href="">njedok prend tiga</a></div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <div><a href="">mentok satu</a></div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <div><a href="">jeruh satu</a></div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <?php
-            $homepage = $pages->get("/");
-
-            function echoChild($child)
-            {
-                echo "<li>";
-                echoLink($child);
-                echo "</li>";
-            }
-            function echoLink($child)
-            {
-                echo "<div><a href='$child->url'>$child->title</a></div>";
-            }
-
-            function echoChildren($childs)
-            {
-                foreach ($childs as $child) {
-
-                    if ($child->hasChildren()) {
-                        echo '<li class="dropdown">';
-                        echoLink($child);
-                        echo '<ul class="submenu">';
-                        echoChildren($child->children());
-                        echo "</ul></li>";
-                    } else {
-                        echoChild($child);
-                    }
-                }
-            }
-
-            echoChildren($homepage->children());
-            ?>
-        </ul>
-    </nav>
+    <?php
+ include(\ProcessWire\wire('files')->compile(\ProcessWire\wire("config")->paths->root . "site/templates/menu.php",array('includes'=>true,'namespace'=>true,'modules'=>true,'skipIfNamespace'=>true)));
+    ?>
     <header>
         <div class="slider">
             <div id="slideimg">
@@ -153,7 +63,7 @@
             </div>
         </div>
     </header>
-    <section>
+    <main>
         <div class="zitat">
             <q>
                 <?php echo $page->zitat_text;  ?>
@@ -171,7 +81,7 @@
                     $image = $page_text->home_page_images;
                     if ($image) {
                         $thumb = $image->getCrop("page");
-                        echo "<a class='cardimage' href='$image->url'><img style='width: 100%;height: 100%;' width='1200' height='800' src='$thumb->url' alt='$image->description'></a>";
+                        echo "<a class='cardImage' href='$image->url'><img class='cardImageImage' width='1200' height='800'  src='$thumb->url' alt='$image->description'></a>";
                     }
                     echo "<h2>$page_text->home_page_text_title</h2>";
                     echo "<p>$page_text->standart_text</p>";
@@ -180,18 +90,10 @@
             }
             ?>
         </div>
-
-    </section>
-
-    <footer>
-        <p class="footerdark">Copyright © 2022 OpenSause</p>
-        <div>
-            <a href="<?php echo $config->urls->root ?>/about-us/legal-stuff">Legal Stuff</a>
-            <a class="footerdark" href="<?php echo ($page->editable() ? $page->editURL : "#") ?>"><?php echo ($page->editable() ? "Edit" : "|") ?></a>
-            <a href="<?php echo $config->urls->root ?>/about-us/privacy-policy/">Privacy Policy</a>
-        </div>
-    </footer>
-
+    </main>
+    <?php
+ include(\ProcessWire\wire('files')->compile(\ProcessWire\wire("config")->paths->root . "site/templates/footer.php",array('includes'=>true,'namespace'=>true,'modules'=>true,'skipIfNamespace'=>true)));
+    ?>
 </body>
 
 </html>

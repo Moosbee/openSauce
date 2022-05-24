@@ -20,3 +20,12 @@
 2022-05-16 05:48:49	guest	http://localhost/openSauce/	Compiled file: /site/modules/CookieManagementBanner/wrapper.tpl.php
 2022-05-16 05:48:49	guest	http://localhost/openSauce/	Maintenance/Remove target file: /site/assets/cache/FileCompiler/site/templates/footer.php
 2022-05-19 14:20:40	guest	http://localhost/openSauce/	Maintenance/Copy new version of source file to target file: /site/templates/basic-page.php => /site/assets/cache/FileCompiler/site/templates/basic-page.php
+2022-05-21 13:30:40	?	?	Compiled file: /site/modules/CookieManagementBanner/CookieManagementBanner.module.php
+2022-05-21 13:30:41	admin	http://localhost/opensauce/about-us/legal-stuff/	Compiled file: /site/modules/CookieManagementBanner/CookieManagementBanner.config.php
+2022-05-21 13:30:41	admin	http://localhost/opensauce/about-us/legal-stuff/	Compiled file: /site/modules/CookieManagementBanner/wrapper.tpl.php
+2022-05-21 17:19:55	admin	http://localhost/opensauce/	Compiled file: /site/templates/home.php
+2022-05-21 19:00:06	admin	http://localhost/opensauce/	Compiled file: /site/templates/home.php
+2022-05-21 19:01:26	admin	http://localhost/opensauce/	Compiled file: /site/templates/home.php
+2022-05-21 19:01:52	admin	http://localhost/opensauce/	Compiled file: /site/templates/home.php
+2022-05-21 19:16:04	admin	http://localhost/opensauce/	Compiled file: /site/templates/home.php
+2022-05-21 19:24:58	admin	http://localhost/opensauce/	Compiled file: /site/templates/home.php

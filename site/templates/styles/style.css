@@ -34,7 +34,7 @@ nav {
     background-color: var(--col-primary);
 }
 
-section {
+main {
     background-color: var(--col-background);
     margin-inline: auto;
     padding-block: 1rem;
@@ -50,7 +50,7 @@ section {
 
 
 
-section {
+main {
     display: grid;
 }
 

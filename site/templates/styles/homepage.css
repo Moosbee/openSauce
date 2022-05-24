@@ -1,28 +1,40 @@
 :root {
-    --col-primary: #65211F;
-    --col-secondary: #EE964B;
-    --col-tertiary: #4F5D2F;
-    --col-background: #D4F4DD;
-    --col-text: #0C0A3E;
+  --col-primary: #65211f;
+  --col-secondary: #ee964b;
+  --col-tertiary: #4f5d2f;
+  --col-background: #d4f4dd;
+  --col-text: #0c0a3e;
 }
 
-.zitat {}
+.zitat {
+}
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.2rem;
 }
 
 .card {
-    width: calc(50% - 1rem);
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid var(--col-primary);
+  width: calc(50% - 1rem);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--col-primary);
+  text-align: center;
 }
 
-.cardimage {
-    position: relative;
-    width: 100%;
-    padding: 100%;
+.cardImage {
+  position: relative;
+  width: 100%;
+  padding-top: 66.6666%;
+}
+
+.cardImageImage {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
 }
