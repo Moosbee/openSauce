@@ -10,6 +10,9 @@ header {
   width: 100%;
 
   position: relative;
+  box-shadow: 5px 8px 14px 2px rgba(12, 10, 62, 0.39);
+  -webkit-box-shadow: 5px 8px 14px 2px rgba(12, 10, 62, 0.39);
+  -moz-box-shadow: 5px 8px 14px 2px rgba(12, 10, 62, 0.39);
 }
 
 .slider {

@@ -6,13 +6,30 @@
   --col-text: #0c0a3e;
 }
 
+main {
+  padding-block: 0rem;
+
+  box-shadow: 5px 8px 14px 2px rgba(12, 10, 62, 0.39);
+  -webkit-box-shadow: 5px 8px 14px 2px rgba(12, 10, 62, 0.39);
+  -moz-box-shadow: 5px 8px 14px 2px rgba(12, 10, 62, 0.39);
+}
+
 .zitat {
+  width: auto;
+  padding-block: 2rem;
+  text-align: center;
+  color: var(--col-text);
+  background-color: var(--col-secondary);
+  /* box-shadow: 5px 8px 14px 2px rgba(12, 10, 62, 0.39);
+  -webkit-box-shadow: 5px 8px 14px 2px rgba(12, 10, 62, 0.39);
+  -moz-box-shadow: 5px 8px 14px 2px rgba(12, 10, 62, 0.39); */
 }
 
 .cards {
   display: flex;
   flex-wrap: wrap;
   margin: 0.2rem;
+  margin-top: 1rem;
 }
 
 .card {

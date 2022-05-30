@@ -29,3 +29,6 @@
 2022-05-21 19:01:52	admin	http://localhost/opensauce/	Compiled file: /site/templates/home.php
 2022-05-21 19:16:04	admin	http://localhost/opensauce/	Compiled file: /site/templates/home.php
 2022-05-21 19:24:58	admin	http://localhost/opensauce/	Compiled file: /site/templates/home.php
+2022-05-25 10:54:59	guest	http://localhost/openSauce/	Compiled file: /site/templates/home.php
+2022-05-25 10:56:41	guest	http://localhost/openSauce/bbq-sossen/	Compiled file: /site/templates/basic-page.php
+2022-05-27 11:15:16	admin	http://localhost/openSauce/	Compiled file: /site/templates/home.php

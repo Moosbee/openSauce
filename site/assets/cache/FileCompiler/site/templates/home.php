@@ -72,6 +72,7 @@
                 <?php echo $page->zitat_name;  ?>
             </b>
         </div>
+        <hr>
         <div class="cards">
 
             <?php
