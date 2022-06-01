@@ -54,3 +54,10 @@
 2022-05-18 13:29:02	admin	http://localhost/openSauce/processwire/module/	Saved module info caches
 2022-05-18 13:29:19	admin	http://localhost/openSauce/processwire/module/	Installed module 'FieldtypeFieldsetPage'
 2022-05-18 13:29:20	admin	http://localhost/openSauce/processwire/module/	Saved module info caches
+2022-06-01 13:32:10	admin	http://localhost/openSauce/processwire/module/?reset=1	Saved module info caches
+2022-06-01 13:32:38	admin	http://localhost/openSauce/processwire/module/	Installed module 'GeneralSettings'
+2022-06-01 13:32:38	admin	http://localhost/openSauce/processwire/module/	Installed module 'ProcessGeneralSettings'
+2022-06-01 13:32:38	admin	http://localhost/openSauce/processwire/module/	Saved module info caches
+2022-06-01 13:47:36	admin	http://localhost/openSauce/processwire/module/?reset=1	Saved module info caches
+2022-06-01 13:47:36	admin	http://localhost/openSauce/processwire/module/?reset=1	Found 2 module(s) missing file: GeneralSettings => C:/xampp/htdocs/openSauce/site/modules/ProcessGeneralSettings/GeneralSettings.module, ProcessGeneralSettings => C:/xampp/htdocs/openSauce/site/modules/ProcessGeneralSettings/ProcessGeneralSettings.module
+2022-06-01 13:49:51	admin	http://localhost/openSauce/processwire/module/?reset=1	Saved module info caches

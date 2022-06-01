@@ -30,8 +30,11 @@
         echo "<link rel='icon' type='image/png' href='$fav16x16->url' sizes='32x32' />";
         echo "<link rel='icon' type='image/png' href='$fav32x32->url' sizes='16x16' />";
     } else {
-        echo "<link rel='icon' type='image/png' href='" . $config->urls->root . "favicon-32x32.png' sizes='32x32' />";
-        echo "<link rel='icon' type='image/png' href='" . $config->urls->root . "favicon-16x16.png' sizes='16x16' />";
+        $image = $pages->get('/settings/')->favicon;
+        $fav16x16 = $image->getCrop('16x16');
+        $fav32x32 = $image->getCrop('32x32');
+        echo "<link rel='icon' type='image/png' href='$fav16x16->url' sizes='32x32' />";
+        echo "<link rel='icon' type='image/png' href='$fav32x32->url' sizes='16x16' />";
     }
     ?>
 </head>

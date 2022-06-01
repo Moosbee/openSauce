@@ -1,8 +1,12 @@
 <nav>
         <div class="navigation">
             <div class="mobilemenu">
-                <a class="menuicon" href="<?php echo $config->urls->root ?>"><img class="logo" src="<?php echo $config->urls->templates ?>images/logo1.png" alt="Logo" srcset=""></a>
-                <h1 class="Titel"><?php echo ($page->title == "Home" ? "OpenSauce" : $page->title) ?></h1>
+                <?php
+                $logourl=$pages->get('/settings/')->logo;
+                    echo "<a class='menuicon' href='".$config->urls->root."'><img class='logo' src='$logourl->url' alt='Logo'></a>";
+                ?>
+                <!-- <a class="menuicon" href="<?php echo $config->urls->root ?>"><img class="logo" src="<?php echo $config->urls->templates ?>images/logo1.png" alt="Logo" srcset=""></a> -->
+                <h1 class="Titel"><?php echo ($page->title == "Home" ? $pages->get('/settings/')->title : $page->title) ?></h1>
                 <button id="openClose">
                     <div class="fas fa-align-justify small switchIcon"></div>
                     <div class="fas fa-times small switchIcon start"></div>

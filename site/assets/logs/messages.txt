@@ -14,3 +14,4 @@
 2022-05-18 13:36:12	admin	http://localhost/openSauce/processwire/setup/field/save?id=112	Deleted field "textbox" data in 0 row(s) from 0 page(s) using template "repeater_home_page_text". [page-by-page] (Fields)
 2022-05-19 14:28:41	admin	http://localhost/openSauce/processwire/setup/template/removeFields	Deleted field "standart_text" data in 0 row(s) from 0 page(s) using template "home". [page-by-page] (Fields)
 2022-05-19 14:54:34	admin	http://localhost/openSauce/processwire/page/edit/?id=1	Populated initial created/modified dates for 'home_page_images' (FieldtypeCroppableImage3)
+2022-06-01 14:00:16	admin	http://localhost/openSauce/processwire/page/add/	Populated initial created/modified dates for 'logo'
