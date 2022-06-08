@@ -37,7 +37,7 @@ main {
   margin-inline: auto;
   display: flex;
   flex-direction: column;
-  border: 0.3rem solid var(--col-primary);
+  border: 0.2rem solid var(--col-primary);
   text-align: center;
   border-radius: 1rem;
   padding: 0.3rem;
