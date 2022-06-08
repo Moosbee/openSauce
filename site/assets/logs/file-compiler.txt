@@ -33,3 +33,10 @@
 2022-05-25 10:56:41	guest	http://localhost/openSauce/bbq-sossen/	Compiled file: /site/templates/basic-page.php
 2022-05-27 11:15:16	admin	http://localhost/openSauce/	Compiled file: /site/templates/home.php
 2022-06-01 14:52:41	admin	http://localhost/openSauce/	Compiled file: /site/templates/home.php
+2022-06-08 14:02:24	guest	http://localhost/openSauce/	Maintenance/Copy new version of source file to target file: /site/templates/basic-page.php => /site/assets/cache/FileCompiler/site/templates/basic-page.php
+2022-06-08 14:02:25	guest	http://localhost/openSauce/	Maintenance/Remove directory: /site/assets/cache/FileCompiler/site/modules/ProcessGeneralSettings
+2022-06-08 14:20:10	admin	http://localhost/openSauce/salat-dressing/	Compiled file: /site/templates/basic-page.php
+2022-06-08 15:03:28	admin	http://localhost/openSauce/salat-dressing/	Compiled file: /site/templates/basic-page.php
+2022-06-08 15:03:30	admin	http://localhost/openSauce/	Compiled file: /site/templates/home.php
+2022-06-08 15:29:43	admin	http://localhost/openSauce/	Compiled file: /site/templates/home.php
+2022-06-08 15:36:37	admin	http://localhost/openSauce/about-us/	Compiled file: /site/templates/basic-page.php
