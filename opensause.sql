@@ -327,6 +327,18 @@ CREATE TABLE IF NOT EXISTS `field_title` (
 ) ENGINE = MyISAM DEFAULT CHARSET = utf8;
 
 # ------------------------------------------------------------
+# SCHEMA DUMP FOR TABLE: field_webseiten_titel
+# ------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `field_webseiten_titel` (
+  `pages_id` int(10) unsigned NOT NULL,
+  `data` text NOT NULL,
+  PRIMARY KEY (`pages_id`),
+  KEY `data_exact` (`data`(250)),
+  FULLTEXT KEY `data` (`data`)
+) ENGINE = MyISAM DEFAULT CHARSET = utf8;
+
+# ------------------------------------------------------------
 # SCHEMA DUMP FOR TABLE: field_zitat
 # ------------------------------------------------------------
 
@@ -409,7 +421,7 @@ CREATE TABLE IF NOT EXISTS `fields` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`),
   KEY `type` (`type`)
-) ENGINE = MyISAM AUTO_INCREMENT = 118 DEFAULT CHARSET = utf8;
+) ENGINE = MyISAM AUTO_INCREMENT = 119 DEFAULT CHARSET = utf8;
 
 # ------------------------------------------------------------
 # SCHEMA DUMP FOR TABLE: modules
@@ -449,7 +461,7 @@ CREATE TABLE IF NOT EXISTS `pages` (
   KEY `created` (`created`),
   KEY `status` (`status`),
   KEY `published` (`published`)
-) ENGINE = MyISAM AUTO_INCREMENT = 1034 DEFAULT CHARSET = utf8;
+) ENGINE = MyISAM AUTO_INCREMENT = 1035 DEFAULT CHARSET = utf8;
 
 # ------------------------------------------------------------
 # SCHEMA DUMP FOR TABLE: pages_access
@@ -567,7 +579,7 @@ INSERT INTO
 VALUES
   (
     'FileCompiler__a00a54d9a295494ebe10b695958f576b',
-    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/templates\\/home.php\",\"hash\":\"df3159bfcf0f3c5b1e61f596c31ba6bb\",\"size\":4528,\"time\":1654085007,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/home.php\",\"hash\":\"7dee1bd3147985345539adfde5fb5c36\",\"size\":4872,\"time\":1654085007}}',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/templates\\/home.php\",\"hash\":\"2650408069bf374117d7022a28575abe\",\"size\":3219,\"time\":1654694970,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/home.php\",\"hash\":\"a52a30d74b2a43593e94380897823c96\",\"size\":3735,\"time\":1654694970}}',
     '2010-04-08 03:10:10'
   );
 INSERT INTO
@@ -575,7 +587,7 @@ INSERT INTO
 VALUES
   (
     'FileCompiler__6abee2988f5d12d0c13b7e051f679567',
-    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/templates\\/basic-page.php\",\"hash\":\"fb79671cafab6de9df0e466ae2e41ceb\",\"size\":2089,\"time\":1653468655,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/basic-page.php\",\"hash\":\"08158390c945709dc4ae58aab279a11b\",\"size\":2433,\"time\":1653468655}}',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/templates\\/basic-page.php\",\"hash\":\"4e2813d8d7239a13d5fa6599da2ae2bc\",\"size\":927,\"time\":1654694970,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/basic-page.php\",\"hash\":\"f62868d538c023738cdbd8f234e2e14a\",\"size\":1443,\"time\":1654694970}}',
     '2010-04-08 03:10:10'
   );
 INSERT INTO
@@ -738,6 +750,14 @@ VALUES
     '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/templates\\/footer.php\",\"hash\":\"63d2bf39557d18425c6d34e7f608e609\",\"size\":436,\"time\":1653468655,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/footer.php\",\"hash\":\"63d2bf39557d18425c6d34e7f608e609\",\"size\":436,\"time\":1653468655}}',
     '2010-04-08 03:10:10'
   );
+INSERT INTO
+  `caches` (`name`, `data`, `expires`)
+VALUES
+  (
+    'FileCompiler__62aa88e614ff642fc5e425cf3cee0db7',
+    '{\"source\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/templates\\/teilHeader.php\",\"hash\":\"d2350851589d9756e89f450b01faa8b4\",\"size\":1292,\"time\":1654694970,\"ns\":\"\\\\\"},\"target\":{\"file\":\"C:\\/xampp\\/htdocs\\/openSauce\\/site\\/assets\\/cache\\/FileCompiler\\/site\\/templates\\/teilHeader.php\",\"hash\":\"d2350851589d9756e89f450b01faa8b4\",\"size\":1292,\"time\":1654694970}}',
+    '2010-04-08 03:10:10'
+  );
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: field_admin_theme
@@ -862,6 +882,38 @@ VALUES
     630,
     1.90
   );
+INSERT INTO
+  `field_home_page_images` (
+    `pages_id`,
+    `data`,
+    `sort`,
+    `description`,
+    `modified`,
+    `created`,
+    `filedata`,
+    `filesize`,
+    `created_users_id`,
+    `modified_users_id`,
+    `width`,
+    `height`,
+    `ratio`
+  )
+VALUES
+  (
+    1034,
+    'frau-als-chefkoch-mit-rotem-herzen-63517137.jpg',
+    0,
+    '',
+    '2022-06-08 15:19:52',
+    '2022-06-08 15:19:52',
+    '',
+    40262,
+    41,
+    41,
+    800,
+    533,
+    1.50
+  );
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: field_home_page_text
@@ -870,7 +922,7 @@ VALUES
 INSERT INTO
   `field_home_page_text` (`pages_id`, `data`, `count`, `parent_id`)
 VALUES
-  (1, '1031,1032', 2, 1030);
+  (1, '1031,1032,1034', 3, 1030);
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: field_home_page_text_title
@@ -884,6 +936,10 @@ INSERT INTO
   `field_home_page_text_title` (`pages_id`, `data`)
 VALUES
   (1032, 'Unser Betrieb steht seit 2022');
+INSERT INTO
+  `field_home_page_text_title` (`pages_id`, `data`)
+VALUES
+  (1034, 'Wir lieben unseren job!!!!!!');
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: field_logo
@@ -991,19 +1047,35 @@ VALUES
 INSERT INTO
   `field_phits` (`pages_id`, `data`, `last_hit`)
 VALUES
-  (1, 16, '2022-06-01 14:52:42');
+  (1, 19, '2022-06-08 15:29:44');
 INSERT INTO
   `field_phits` (`pages_id`, `data`, `last_hit`)
 VALUES
-  (1016, 1, '2022-06-01 14:52:25');
+  (1016, 4, '2022-06-08 15:36:41');
 INSERT INTO
   `field_phits` (`pages_id`, `data`, `last_hit`)
 VALUES
-  (1018, 2, '2022-06-01 14:58:01');
+  (1017, 1, '2022-06-08 15:36:55');
 INSERT INTO
   `field_phits` (`pages_id`, `data`, `last_hit`)
 VALUES
-  (1025, 2, '2022-05-27 10:06:31');
+  (1018, 4, '2022-06-08 15:36:43');
+INSERT INTO
+  `field_phits` (`pages_id`, `data`, `last_hit`)
+VALUES
+  (1019, 1, '2022-06-08 15:36:59');
+INSERT INTO
+  `field_phits` (`pages_id`, `data`, `last_hit`)
+VALUES
+  (1023, 1, '2022-06-08 15:03:32');
+INSERT INTO
+  `field_phits` (`pages_id`, `data`, `last_hit`)
+VALUES
+  (1024, 1, '2022-06-08 15:36:38');
+INSERT INTO
+  `field_phits` (`pages_id`, `data`, `last_hit`)
+VALUES
+  (1025, 4, '2022-06-08 15:36:45');
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: field_process
@@ -1386,6 +1458,48 @@ VALUES
     1023,
     '<p><strong>Datenschutzerklärung</strong></p>\n\n<p><strong>Allgemeiner Hinweis und Pflichtinformationen</strong></p>\n\n<p><strong>Benennung der verantwortlichen Stelle</strong></p>\n\n<p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>\n\n<p>Open Sauce<br />\nBernhard Rieder<br />\ndd<br />\n123 Musteort</p>\n\n<p> </p>\n\n<p>Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. Ä.).</p>\n\n<p><strong>Widerruf Ihrer Einwilligung zur Datenverarbeitung</strong></p>\n\n<p>Nur mit Ihrer ausdrücklichen Einwilligung sind einige Vorgänge der Datenverarbeitung möglich. Ein Widerruf Ihrer bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>\n\n<p><strong>Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde</strong></p>\n\n<p>Als Betroffener steht Ihnen im Falle eines datenschutzrechtlichen Verstoßes ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde bezüglich datenschutzrechtlicher Fragen ist der Landesdatenschutzbeauftragte des Bundeslandes, in dem sich der Sitz unseres Unternehmens befindet. Der folgende Link stellt eine Liste der Datenschutzbeauftragten sowie deren Kontaktdaten bereit: <a href=\"https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html\" target=\"_blank\" rel=\"noreferrer noopener\">https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>.</p>\n\n<p><strong>Recht auf Datenübertragbarkeit</strong></p>\n\n<p>Ihnen steht das Recht zu, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an Dritte aushändigen zu lassen. Die Bereitstellung erfolgt in einem maschinenlesbaren Format. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.</p>\n\n<p><strong>Recht auf Auskunft, Berichtigung, Sperrung, Löschung</strong></p>\n\n<p>Sie haben jederzeit im Rahmen der geltenden gesetzlichen Bestimmungen das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, Herkunft der Daten, deren Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Diesbezüglich und auch zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit über die im Impressum aufgeführten Kontaktmöglichkeiten an uns wenden.</p>\n\n<p><strong>SSL- bzw. TLS-Verschlüsselung</strong></p>\n\n<p>Aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, die Sie an uns als Seitenbetreiber senden, nutzt unsere Website eine SSL-bzw. TLS-Verschlüsselung. Damit sind Daten, die Sie über diese Website übermitteln, für Dritte nicht mitlesbar. Sie erkennen eine verschlüsselte Verbindung an der „https://“ Adresszeile Ihres Browsers und am Schloss-Symbol in der Browserzeile.</p>\n\n<p><strong>Server-Log-Dateien</strong></p>\n\n<p>In Server-Log-Dateien erhebt und speichert der Provider der Website automatisch Informationen, die Ihr Browser automatisch an uns übermittelt. Dies sind:</p>\n\n<ul>\n\t<li>Besuchte Seite auf unserer Domain</li>\n\t<li>Datum und Uhrzeit der Serveranfrage</li>\n\t<li>Browsertyp und Browserversion</li>\n\t<li>Verwendetes Betriebssystem</li>\n\t<li>Referrer URL</li>\n\t<li>Hostname des zugreifenden Rechners</li>\n\t<li>IP-Adresse</li>\n</ul>\n\n<p>Es findet keine Zusammenführung dieser Daten mit anderen Datenquellen statt. Grundlage der Datenverarbeitung bildet Art. 6 Abs. 1 lit. b DSGVO, der die Verarbeitung von Daten zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen gestattet.</p>\n\n<p><strong>YouTube</strong></p>\n\n<p>Für Integration und Darstellung von Videoinhalten nutzt unsere Website Plugins von YouTube. Anbieter des Videoportals ist die YouTube, LLC, 901 Cherry Ave., San Bruno, CA 94066, USA.</p>\n\n<p>Bei Aufruf einer Seite mit integriertem YouTube-Plugin wird eine Verbindung zu den Servern von YouTube hergestellt. YouTube erfährt hierdurch, welche unserer Seiten Sie aufgerufen haben.</p>\n\n<p>YouTube kann Ihr Surfverhalten direkt Ihrem persönlichen Profil zuzuordnen, sollten Sie in Ihrem YouTube Konto eingeloggt sein. Durch vorheriges Ausloggen haben Sie die Möglichkeit, dies zu unterbinden.</p>\n\n<p>Die Nutzung von YouTube erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.</p>\n\n<p>Einzelheiten zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von YouTube unter: <a href=\"https://www.google.de/intl/de/policies/privacy\">https://www.google.de/intl/de/policies/privacy</a>.</p>\n\n<p><strong>Cookies</strong></p>\n\n<p>Unsere Website verwendet Cookies. Das sind kleine Textdateien, die Ihr Webbrowser auf Ihrem Endgerät speichert. Cookies helfen uns dabei, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen.</p>\n\n<p>Einige Cookies sind “Session-Cookies.” Solche Cookies werden nach Ende Ihrer Browser-Sitzung von selbst gelöscht. Hingegen bleiben andere Cookies auf Ihrem Endgerät bestehen, bis Sie diese selbst löschen. Solche Cookies helfen uns, Sie bei Rückkehr auf unserer Website wiederzuerkennen.</p>\n\n<p>Mit einem modernen Webbrowser können Sie das Setzen von Cookies überwachen, einschränken oder unterbinden. Viele Webbrowser lassen sich so konfigurieren, dass Cookies mit dem Schließen des Programms von selbst gelöscht werden. Die Deaktivierung von Cookies kann eine eingeschränkte Funktionalität unserer Website zur Folge haben.</p>\n\n<p>Das Setzen von Cookies, die zur Ausübung elektronischer Kommunikationsvorgänge oder der Bereitstellung bestimmter, von Ihnen erwünschter Funktionen (z.B. Warenkorb) notwendig sind, erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Als Betreiber dieser Website haben wir ein berechtigtes Interesse an der Speicherung von Cookies zur technisch fehlerfreien und reibungslosen Bereitstellung unserer Dienste. Sofern die Setzung anderer Cookies (z.B. für Analyse-Funktionen) erfolgt, werden diese in dieser Datenschutzerklärung separat behandelt.</p>\n\n<p><strong>Google Analytics</strong></p>\n\n<p>Unsere Website verwendet Funktionen des Webanalysedienstes Google Analytics. Anbieter des Webanalysedienstes ist die Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.</p>\n\n<p>Google Analytics verwendet \"Cookies.\" Das sind kleine Textdateien, die Ihr Webbrowser auf Ihrem Endgerät speichert und eine Analyse der Website-Benutzung ermöglichen. Mittels Cookie erzeugte Informationen über Ihre Benutzung unserer Website werden an einen Server von Google übermittelt und dort gespeichert. Server-Standort ist im Regelfall die USA.</p>\n\n<p>Das Setzen von Google-Analytics-Cookies erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Als Betreiber dieser Website haben wir  ein berechtigtes Interesse an der Analyse des Nutzerverhaltens, um unser Webangebot und ggf. auch Werbung zu optimieren.</p>\n\n<p>IP-Anonymisierung</p>\n\n<p>Wir setzen Google Analytics in Verbindung mit der Funktion IP-Anonymisierung ein. Sie gewährleistet, dass Google Ihre IP-Adresse innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum vor der Übermittlung in die USA kürzt. Es kann Ausnahmefälle geben, in denen Google die volle IP-Adresse an einen Server in den USA überträgt und dort kürzt. In unserem Auftrag wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über Websiteaktivitäten zu erstellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber uns zu erbringen. Es findet keine Zusammenführung der von Google Analytics übermittelten IP-Adresse mit anderen Daten von Google statt.</p>\n\n<p>Browser Plugin</p>\n\n<p>Das Setzen von Cookies durch Ihren Webbrowser ist verhinderbar. Einige Funktionen unserer Website könnten dadurch jedoch eingeschränkt werden. Ebenso können Sie die Erfassung von Daten bezüglich Ihrer Website-Nutzung einschließlich Ihrer IP-Adresse mitsamt anschließender Verarbeitung durch Google unterbinden. Dies ist möglich, indem Sie das über folgenden Link erreichbare Browser-Plugin herunterladen und installieren: <a href=\"https://tools.google.com/dlpage/gaoptout?hl=de\">https://tools.google.com/dlpage/gaoptout?hl=de</a>.</p>\n\n<p>Widerspruch gegen die Datenerfassung</p>\n\n<p>Sie können die Erfassung Ihrer Daten durch Google Analytics verhindern, indem Sie auf folgenden Link klicken. Es wird ein Opt-Out-Cookie gesetzt, der die Erfassung Ihrer Daten bei zukünftigen Besuchen unserer Website verhindert: Google Analytics deaktivieren.</p>\n\n<p>Einzelheiten zum Umgang mit Nutzerdaten bei Google Analytics finden Sie in der Datenschutzerklärung von Google: <a href=\"https://support.google.com/analytics/answer/6004245?hl=de\">https://support.google.com/analytics/answer/6004245?hl=de</a>.</p>\n\n<p>Auftragsverarbeitung</p>\n\n<p>Zur vollständigen Erfüllung der gesetzlichen Datenschutzvorgaben haben wir mit Google einen Vertrag über die Auftragsverarbeitung abgeschlossen.</p>\n\n<p>Demografische Merkmale bei Google Analytics</p>\n\n<p>Unsere Website verwendet die Funktion “demografische Merkmale” von Google Analytics. Mit ihr lassen sich Berichte erstellen, die Aussagen zu Alter, Geschlecht und Interessen der Seitenbesucher enthalten. Diese Daten stammen aus interessenbezogener Werbung von Google sowie aus Besucherdaten von Drittanbietern. Eine Zuordnung der Daten zu einer bestimmten Person ist nicht möglich. Sie können diese Funktion jederzeit deaktivieren. Dies ist über die Anzeigeneinstellungen in Ihrem Google-Konto möglich oder indem Sie die Erfassung Ihrer Daten durch Google Analytics, wie im Punkt “Widerspruch gegen die Datenerfassung” erläutert, generell untersagen.</p>\n\n<p><small>Quelle: Datenschutz-Konfigurator von <a href=\"http://www.mein-datenschutzbeauftragter.de\" target=\"_blank\" rel=\"noreferrer noopener\">mein-datenschutzbeauftragter.de</a></small></p>'
   );
+INSERT INTO
+  `field_standart_text` (`pages_id`, `data`)
+VALUES
+  (
+    1020,
+    '<h1><strong>Wien</strong></h1>\n\n<p>Mitten in Wien befindet sich unsere Zentrale gleich neben dem großen Festspielhaus. Das am östlichen Ortsrand gelegene Werksgelände grenzt nördlich an den Bahnhof und der Bundesstraße. Entlang der Bundesstraße sind Grünland und Wohngebiet gemischt anzutreffen. Im Osten und Süden befinden sich die Gewerbezone und landwirtschaftlich genutzte Grünflächen. Eine westlich liegende Wohnsiedlung wird durch einen bepflanzten Lärmschutzwall und eine Zufahrtsstraße begrenzt. Die Verkehrsanbindung erfolgt über eine Werkszufahrt im Nordwesten und darüber hinaus über ein eigenes Anschlussgleis der Lokalbahn.</p>\n\n<p>Durch die Errichtung eines Betriebes zur Herstellung Soßens und Dressings erhielt diese rein landwirtschaftlich und kleingewerblich strukturierte Gemeinde ein modernes Werk mit globaler Vernetzung. Ausgehend vom diesen Standort erwirtschaften wir eine Exportquote von bis zu 90%, wodurch speziell im europäischen Raum eine sehr starke Marktposition eingenommen wird. Mit derzeit 660 Mitarbeiterinnen und Mitarbeitern ist unsere Firma die kleinste in Wien.</p>\n\n<p>Jegliche Produktionsanlagen funktionieren äußerst lärm- und emissionsarm, wodurch es zu keinerlei Beeinträchtigungen für Natur und Umgebung kommt. Seit langem besteht ein ausgezeichnetes nachbarschaftliches Klima zu allen Anrainern, welches durch die erfolgreiche Symbiose zwischen Mensch, Natur und Industrie gefördert wird.</p>'
+  );
+INSERT INTO
+  `field_standart_text` (`pages_id`, `data`)
+VALUES
+  (
+    1021,
+    '<h1>Salzburg</h1>\n\n<p>Mitten in Salzburg befindet sich unsere Zentrale gleich neben dem großen Festspielhaus. Das am östlichen Ortsrand gelegene Werksgelände grenzt nördlich an den Bahnhof und der Bundesstraße. Entlang der Bundesstraße sind Grünland und Wohngebiet gemischt anzutreffen. Im Osten und Süden befinden sich die Gewerbezone und landwirtschaftlich genutzte Grünflächen. Eine westlich liegende Wohnsiedlung wird durch einen bepflanzten Lärmschutzwall und eine Zufahrtsstraße begrenzt. Die Verkehrsanbindung erfolgt über eine Werkszufahrt im Nordwesten und darüber hinaus über ein eigenes Anschlussgleis der Lokalbahn.</p>\n\n<p>Durch die Errichtung eines Betriebes zur Herstellung Soßens und Dressings erhielt diese rein landwirtschaftlich und kleingewerblich strukturierte Gemeinde ein modernes Werk mit globaler Vernetzung. Ausgehend vom diesen Standort erwirtschaften wir eine Exportquote von bis zu 90%, wodurch speziell im europäischen Raum eine sehr starke Marktposition eingenommen wird. Mit derzeit 660 Mitarbeiterinnen und Mitarbeitern ist unsere Firma die kleinste in Salzburg.</p>\n\n<p>Jegliche Produktionsanlagen funktionieren äußerst lärm- und emissionsarm, wodurch es zu keinerlei Beeinträchtigungen für Natur und Umgebung kommt. Seit langem besteht ein ausgezeichnetes nachbarschaftliches Klima zu allen Anrainern, welches durch die erfolgreiche Symbiose zwischen Mensch, Natur und Industrie gefördert wird.</p>'
+  );
+INSERT INTO
+  `field_standart_text` (`pages_id`, `data`)
+VALUES
+  (
+    1018,
+    '<p><strong>Barbecuesauce</strong> (auch BBQ-Sauce) ist eine <a href=\"https://de.wikipedia.org/wiki/W%C3%BCrzsauce\" title=\"Würzsauce\">Würzsauce</a>, die vornehmlich für <a href=\"https://de.wikipedia.org/wiki/Grillen\" title=\"Grillen\">Grill-</a> und <a href=\"https://de.wikipedia.org/wiki/Barbecue\" title=\"Barbecue\">Barbecuegerichte</a> Verwendung findet. Die Sauce kann kalt oder auch warm serviert werden. Sie dient als <a href=\"https://de.wikipedia.org/wiki/Glasieren\" title=\"Glasieren\">Glasur</a> am Ende des <a href=\"https://de.wikipedia.org/wiki/Garen\" title=\"Garen\">Garvorgangs</a> oder wird als <a href=\"https://de.wikipedia.org/wiki/Sauce#Kalte_Saucen\" title=\"Sauce\">Dip</a> zum fertigen Gericht verzehrt.</p>\n\n<h2>Fertigprodukt</h2>\n\n<p>Die erste industriell hergestellte Barbecuesauce stammte von der Firma <a href=\"https://de.wikipedia.org/wiki/H._J._Heinz_Company\" title=\"H. J. Heinz Company\">Heinz</a> und kam 1948 in den <a href=\"https://de.wikipedia.org/wiki/USA\" title=\"\">USA</a>-weiten Handel.<a href=\"https://de.wikipedia.org/wiki/Barbecuesauce#cite_note-2\">[2]</a></p>\n\n<p>Als Fertigprodukt enthält Barbecuesauce in der Regel ähnliche Grundzutaten wie <a href=\"https://de.wikipedia.org/wiki/Ketchup\" title=\"Ketchup\">Ketchup</a>. Neben <a href=\"https://de.wikipedia.org/wiki/Tomate\" title=\"Tomate\">Tomaten</a> finden vor allem <a href=\"https://de.wikipedia.org/wiki/Zucker\" title=\"Zucker\">Zucker</a> sowie Wasser, Säuerungsmittel, <a href=\"https://de.wikipedia.org/wiki/Verdickungsmittel\" title=\"Verdickungsmittel\">Verdickungsmittel</a>, Gewürze und <a href=\"https://de.wikipedia.org/wiki/Aroma\" title=\"Aroma\">Aromen</a> Verwendung. Die Barbecuesauce unterscheidet sich vom Ketchup vor allem durch eine intensivere Würzung und meist durch die Zugabe von <a href=\"https://de.wikipedia.org/wiki/Raucharoma\" title=\"Raucharoma\">Raucharoma</a>.<a href=\"https://de.wikipedia.org/wiki/Barbecuesauce#cite_note-3\">[3]</a></p>\n\n<p>Durch die Verbreitung der industriell gefertigten Barbecuesaucen mit teilweise künstlichem Raucharoma und deren Verwendung in <a href=\"https://de.wikipedia.org/wiki/Fast-Food\" title=\"Fast-Food\">Fast-Food</a>- und <a href=\"https://de.wikipedia.org/wiki/Kartoffelchips\" title=\"Kartoffelchips\">Snack</a>-Produkten hat sich eine Vorstellung des „typischen Barbecuegeschmacks“ etabliert, der mit dem Geschmack der Gerichte aus einem <a href=\"https://de.wikipedia.org/wiki/Barbecue-Smoker\" title=\"Barbecue-Smoker\">Barbecue-Smoker</a> manchmal nur wenig gemeinsam hat.</p>'
+  );
+INSERT INTO
+  `field_standart_text` (`pages_id`, `data`)
+VALUES
+  (
+    1017,
+    '<p>Ein <strong>Steak</strong> (<a href=\"https://de.wikipedia.org/wiki/Englische_Sprache\" title=\"Englische Sprache\">englisch</a> <em>steak</em> [<a href=\"https://de.wikipedia.org/wiki/Liste_der_IPA-Zeichen\" title=\"Liste der IPA-Zeichen\">steɪk</a>], aus <a href=\"https://de.wikipedia.org/wiki/Altnordische_Sprache\" title=\"Altnordische Sprache\">altnordisch</a> <em>steik</em>, „Braten“, zu <em>steikja</em> „am Spieß braten“; vgl. <a href=\"https://de.wikipedia.org/wiki/Isl%C3%A4ndische_Sprache\" title=\"Isländische Sprache\">neuisländisch</a> <em>steik</em> „Steak“ oder „Braten“; <em>steikja</em>, „braten“) ist eine zum <a href=\"https://de.wikipedia.org/wiki/Braten_(Kochen)\" title=\"Braten (Kochen)\">Kurzbraten</a> oder <a href=\"https://de.wikipedia.org/wiki/Grillen\" title=\"Grillen\">Grillen</a> geeignete <a href=\"https://de.wikipedia.org/wiki/Rindfleisch\" title=\"Rindfleisch\">Rindfleisch</a>scheibe. Steaks, die von anderen Tier- und Fleischarten stammen, tragen einen entsprechenden Hinweis in ihrer Bezeichnung (z. B. <em>Kalbssteak</em>, <em>Schweinesteak</em>, <em>Putensteak</em>, <em>Hirschsteak</em> usw.).<a href=\"https://de.wikipedia.org/wiki/Steak#cite_note-ls2.506-1\">[1]</a><a href=\"https://de.wikipedia.org/wiki/Steak#cite_note-2\">[2]</a> Auch quer zur <a href=\"https://de.wikipedia.org/wiki/Wirbels%C3%A4ule\" title=\"Wirbelsäule\">Wirbelsäule</a> geschnittene Scheiben von größeren, festfleischigen <a href=\"https://de.wikipedia.org/wiki/Speisefisch\" title=\"Speisefisch\">Fischen</a> wie <a href=\"https://de.wikipedia.org/wiki/Schwertfisch\" title=\"Schwertfisch\">Schwertfisch</a>, <a href=\"https://de.wikipedia.org/wiki/Thunfische\" title=\"Thunfische\">Thunfisch</a>, <a href=\"https://de.wikipedia.org/wiki/Haie\" title=\"Haie\">Hai</a> oder <a href=\"https://de.wikipedia.org/wiki/Lachse\" title=\"Lachse\">Lachs</a> werden als Steaks bezeichnet.</p>\n\n<p>Nach deutscher Verkehrsauffassung sind die allgemein gehaltenen Begriffe Steak und <a href=\"https://de.wikipedia.org/wiki/Beefsteak\" title=\"Beefsteak\">Beefsteak</a> identisch. Die Verwendung bestimmter Teilstücke ist nicht vorgeschrieben.<a href=\"https://de.wikipedia.org/wiki/Steak#cite_note-ls2.506-1\">[1]</a> In Deutschland werden Beefsteaks häufig aus der <a href=\"https://de.wikipedia.org/wiki/Oberschale\" title=\"Oberschale\">Oberschale</a> geschnitten. In Österreich hingegen wird der Begriff Beef-Steak fest definiert für ein Steak aus dem <a href=\"https://de.wikipedia.org/wiki/Rinderfilet\" title=\"Rinderfilet\">Rinderfilet</a> verwendet.<a href=\"https://de.wikipedia.org/wiki/Steak#cite_note-3\">[3]</a> <em>Deutsches Beefsteak</em> ist die Bezeichnung für ein <a href=\"https://de.wikipedia.org/wiki/Hacksteak\" title=\"Hacksteak\">Hacksteak</a>, das kein Steak im eigentlichen Sinne ist, sondern eine geformte Hackfleischmasse, die ähnlich zubereitet und in gegartem Zustand verzehrt wird.<a href=\"https://de.wikipedia.org/wiki/Steak#cite_note-4\">[4]</a></p>\n\n<p><a href=\"https://de.wikipedia.org/wiki/Beefsteak_Tatar\" title=\"Beefsteak Tatar\">Beefsteak Tatar</a> wird dagegen aus gewürztem <a href=\"https://de.wikipedia.org/wiki/Hackfleisch#Arten\" title=\"Hackfleisch\">Schabefleisch</a> hergestellt und in rohem Zustand verzehrt.<a href=\"https://de.wikipedia.org/wiki/Steak#cite_note-5\">[5]</a></p>\n\n<p>Der Begriff <em>Kluft</em> wird in einigen Bereichen Norddeutschlands (Schleswig-Holstein, Hamburg und in Teilen Niedersachsens) nicht für die gesamte Keule, sondern nur für die in der Keule liegende Oberschale verwendet. Dementsprechend werden in diesen Regionen Kluftsteaks hauptsächlich aus der Oberschale geschnitten.</p>\n\n<p>T-Bone- und <a href=\"https://de.wikipedia.org/wiki/Porterhouse-Steak\" title=\"Porterhouse-Steak\">Porterhouse-Steak</a> werden lebensmittelrechtlich nicht voneinander abgegrenzt. Ein T-Bone-Steak darf unter der Bezeichnung Porterhouse-Steak angeboten werden und umgekehrt.<a href=\"https://de.wikipedia.org/wiki/Steak#cite_note-6\">[6]</a> Der Verbraucher erwartet beim Porterhouse-Steak jedoch einen größeren Filetanteil und eine insgesamt dickere Scheibe.</p>\n\n<p>Als Prime-Rib-Steak wird ein Steak aus der <a href=\"https://de.wikipedia.org/wiki/Hochrippe\" title=\"Hochrippe\">Hochrippe</a> bezeichnet.<a href=\"https://de.wikipedia.org/wiki/Steak#cite_note-7\">[7]</a> Es wird meist am Stück im Ofen gegart und erst zum Servieren in Scheiben geteilt.</p>\n\n<p>Ein Steak (englisch steak [steɪk], aus altnordisch steik, „Braten“, zu steikja „am Spieß braten“; vgl. neuisländisch steik „Steak“ oder „Braten“; steikja, „braten“) ist eine zum Kurzbraten oder Grillen geeignete Rindfleischscheibe. Steaks, die von anderen Tier- und Fleischarten stammen, tragen einen entsprechenden Hinweis in ihrer Bezeichnung (z. B. Kalbssteak, Schweinesteak, Putensteak, Hirschsteak usw.).[1][2] Auch quer zur Wirbelsäule geschnittene Scheiben von größeren, festfleischigen Fischen wie Schwertfisch, Thunfisch, Hai oder Lachs werden als Steaks bezeichnet.</p>\n\n<p>Varianten</p>\n\n<p>Sirloin-Steak mit Pommes frites</p>\n\n<p>Filetsteak mit Pommes dauphine</p>\n\n<p> </p>\n\n<p>    Nach deutscher Verkehrsauffassung sind die allgemein gehaltenen Begriffe Steak und Beefsteak identisch. Die Verwendung bestimmter Teilstücke ist nicht vorgeschrieben.[1] In Deutschland werden Beefsteaks häufig aus der Oberschale geschnitten. In Österreich hingegen wird der Begriff Beef-Steak fest definiert für ein Steak aus dem Rinderfilet verwendet.[3] Deutsches Beefsteak ist die Bezeichnung für ein Hacksteak, das kein Steak im eigentlichen Sinne ist, sondern eine geformte Hackfleischmasse, die ähnlich zubereitet und in gegartem Zustand verzehrt wird.[4]</p>\n\n<p>    Beefsteak Tatar wird dagegen aus gewürztem Schabefleisch hergestellt und in rohem Zustand verzehrt.[5]</p>\n\n<p>    Der Begriff Kluft wird in einigen Bereichen Norddeutschlands (Schleswig-Holstein, Hamburg und in Teilen Niedersachsens) nicht für die gesamte Keule, sondern nur für die in der Keule liegende Oberschale verwendet. Dementsprechend werden in diesen Regionen Kluftsteaks hauptsächlich aus der Oberschale geschnitten.</p>\n\n<p>    T-Bone- und Porterhouse-Steak werden lebensmittelrechtlich nicht voneinander abgegrenzt. Ein T-Bone-Steak darf unter der Bezeichnung Porterhouse-Steak angeboten werden und umgekehrt.[6] Der Verbraucher erwartet beim Porterhouse-Steak jedoch einen größeren Filetanteil und eine insgesamt dickere Scheibe.</p>\n\n<p>    Als Prime-Rib-Steak wird ein Steak aus der Hochrippe bezeichnet.[7] Es wird meist am Stück im Ofen gegart und erst zum Servieren in Scheiben geteilt.</p>'
+  );
+INSERT INTO
+  `field_standart_text` (`pages_id`, `data`)
+VALUES
+  (
+    1016,
+    '<p><strong>Salat</strong> ist eine <a href=\"https://de.wikipedia.org/wiki/Gericht_(Speise)\" title=\"Gericht (Speise)\">Speise</a> der <a href=\"https://de.wikipedia.org/wiki/Kalte_K%C3%BCche\" title=\"Kalte Küche\">Kalten Küche</a> und kann pikant oder fruchtig-süß sein. Salate bestehen oft aus zerkleinertem Gemüse und/oder Obst ggf. mit anderen Zutaten; sie werden mit einer <a href=\"https://de.wikipedia.org/wiki/Salatsauce\" title=\"Salatsauce\">Salatsauce</a> angemacht und fast immer kalt serviert (bis auf wenige Ausnahmen).</p>\n\n<p>Man unterscheidet nach Zusammensetzung oder Herstellungsweise, z. B. rohe oder gekochte Gemüsesalate. Einfache Salate werden in der Regel als <a href=\"https://de.wikipedia.org/wiki/Beilage_(Speise)\" title=\"Beilage (Speise)\">Beilagensalat</a> gereicht (grüne Salate, aus einer Substanz bestehende aus Rohgemüse oder gekocht). Zusammengesetzte Salate (Salatkompositonen) dienen meist als <a href=\"https://de.wikipedia.org/wiki/Vorspeise\" title=\"Vorspeise\">Vorspeise</a>, vor allem wenn sie Fleisch von Schalentieren, Fisch, Wild usw. enthalten.<a href=\"https://de.wikipedia.org/wiki/Salat_(Speise)#cite_note-:1-1\">[1]</a></p>\n\n<p>Eine <strong>Salatplatte</strong> enthält Mischungen aus gekochten und/oder rohen Salaten (sogenannter gemischter Salat).<a href=\"https://de.wikipedia.org/wiki/Salat_(Speise)#cite_note-:1-1\">[1]</a></p>\n\n<p>Zum Zubereiten von Salaten werden Salatsaucen verwendet. Traditionelle Mayonnaise-Ableitungen werden zunehmend von den energiereduzierten Dressings (Joghurtsauce, Essig-Öl-Kräuter-Saucen, Tomatensaucen) verdrängt.<a href=\"https://de.wikipedia.org/wiki/Salat_(Speise)#cite_note-:0-2\">[2]</a> Innerhalb eines <a href=\"https://de.wikipedia.org/wiki/Men%C3%BC_(Speisenfolge)\" title=\"Menü (Speisenfolge)\">Menüs</a> nehmen Salate weniger die Stelle eines Extragangs ein, sondern vielmehr als Beilage sowie als Vorspeise oder Zwischengericht.<a href=\"https://de.wikipedia.org/wiki/Salat_(Speise)#cite_note-:0-2\">[2]</a></p>'
+  );
+INSERT INTO
+  `field_standart_text` (`pages_id`, `data`)
+VALUES
+  (
+    1034,
+    '<p>Hier bei OpenSauce lieben wir unseren Job!!!!! Wir müssen nur 26 Stunden pro Tag arbeiten anstatt der 35 Stunden die wir letztens arbeiten mussten.</p>'
+  );
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: field_textbox
@@ -1619,6 +1733,15 @@ VALUES
   (1033, 'settings');
 
 # ------------------------------------------------------------
+# DATA DUMP FOR TABLE: field_webseiten_titel
+# ------------------------------------------------------------
+
+INSERT INTO
+  `field_webseiten_titel` (`pages_id`, `data`)
+VALUES
+  (1033, 'OpenSauce');
+
+# ------------------------------------------------------------
 # DATA DUMP FOR TABLE: field_zitat
 # ------------------------------------------------------------
 
@@ -1801,11 +1924,15 @@ VALUES
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (99, 117, 1, NULL);
+  (99, 118, 1, NULL);
 INSERT INTO
   `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
 VALUES
-  (99, 103, 2, NULL);
+  (99, 117, 2, NULL);
+INSERT INTO
+  `fieldgroups_fields` (`fieldgroups_id`, `fields_id`, `sort`, `data`)
+VALUES
+  (99, 103, 3, NULL);
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: fields
@@ -2045,6 +2172,17 @@ VALUES
     0,
     'Logo',
     '{\"fileSchema\":270,\"extensions\":\"gif jpg jpeg png\",\"maxFiles\":1,\"outputFormat\":2,\"descriptionRows\":1,\"useTags\":0,\"gridMode\":\"grid\",\"focusMode\":\"on\",\"resizeServer\":0,\"clientQuality\":90,\"maxReject\":0,\"dimensionsByAspectRatio\":0,\"defaultValuePage\":0,\"inputfieldClass\":\"InputfieldCroppableImage3\"}'
+  );
+INSERT INTO
+  `fields` (`id`, `type`, `name`, `flags`, `label`, `data`)
+VALUES
+  (
+    118,
+    'FieldtypeText',
+    'webseiten_titel',
+    0,
+    'Webseiten Titel',
+    '{\"textformatters\":[\"TextformatterEntities\"],\"collapsed\":0,\"minlength\":0,\"maxlength\":2048,\"showCount\":0,\"size\":0}'
   );
 
 # ------------------------------------------------------------
@@ -2809,7 +2947,7 @@ VALUES
     1,
     'home',
     9,
-    '2022-05-30 12:10:27',
+    '2022-06-08 15:19:52',
     41,
     '2022-04-20 15:06:07',
     2,
@@ -4013,7 +4151,7 @@ VALUES
     29,
     'salat-dressing',
     1,
-    '2022-05-15 20:19:26',
+    '2022-06-08 14:23:25',
     41,
     '2022-05-04 15:06:27',
     41,
@@ -4041,7 +4179,7 @@ VALUES
     29,
     'steak-sossen',
     1,
-    '2022-05-04 15:06:49',
+    '2022-06-08 14:22:33',
     41,
     '2022-05-04 15:06:49',
     41,
@@ -4069,7 +4207,7 @@ VALUES
     29,
     'bbq-sossen',
     1,
-    '2022-05-04 15:07:42',
+    '2022-06-08 14:20:37',
     41,
     '2022-05-04 15:07:38',
     41,
@@ -4125,7 +4263,7 @@ VALUES
     29,
     'wien',
     1,
-    '2022-05-08 20:55:33',
+    '2022-06-08 14:17:29',
     41,
     '2022-05-08 20:55:33',
     41,
@@ -4153,7 +4291,7 @@ VALUES
     29,
     'salzburg',
     1,
-    '2022-05-08 20:55:49',
+    '2022-06-08 14:18:14',
     41,
     '2022-05-08 20:55:49',
     41,
@@ -4461,12 +4599,40 @@ VALUES
     45,
     'settings',
     1057,
-    '2022-06-01 14:22:58',
+    '2022-06-08 15:28:03',
     41,
     '2022-06-01 14:00:16',
     41,
     '2022-06-01 14:00:35',
     8
+  );
+INSERT INTO
+  `pages` (
+    `id`,
+    `parent_id`,
+    `templates_id`,
+    `name`,
+    `status`,
+    `modified`,
+    `modified_users_id`,
+    `created`,
+    `created_users_id`,
+    `published`,
+    `sort`
+  )
+VALUES
+  (
+    1034,
+    1030,
+    44,
+    '1654691739-0105-1',
+    1,
+    '2022-06-08 15:19:52',
+    41,
+    '2022-06-08 14:35:39',
+    41,
+    '2022-06-08 15:19:52',
+    4
   );
 
 # ------------------------------------------------------------
@@ -4585,6 +4751,10 @@ INSERT INTO
   `pages_access` (`pages_id`, `templates_id`, `ts`)
 VALUES
   (1033, 1, '2022-06-01 14:00:16');
+INSERT INTO
+  `pages_access` (`pages_id`, `templates_id`, `ts`)
+VALUES
+  (1034, 2, '2022-06-08 14:35:39');
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: pages_parents
@@ -4663,7 +4833,7 @@ VALUES
 INSERT INTO
   `session_login_throttle` (`name`, `attempts`, `last_attempt`)
 VALUES
-  ('admin', 1, 1654084377);
+  ('admin', 1, 1654689769);
 
 # ------------------------------------------------------------
 # DATA DUMP FOR TABLE: templates
@@ -4757,7 +4927,7 @@ VALUES
     1,
     0,
     0,
-    '{\"useRoles\":1,\"noParents\":1,\"slashUrls\":1,\"compile\":3,\"modified\":1654085007,\"ns\":\"\\\\\",\"roles\":[37]}'
+    '{\"useRoles\":1,\"noParents\":1,\"slashUrls\":1,\"compile\":3,\"modified\":1654694970,\"ns\":\"\\\\\",\"roles\":[37]}'
   );
 INSERT INTO
   `templates` (
@@ -4775,7 +4945,7 @@ VALUES
     83,
     0,
     0,
-    '{\"slashUrls\":1,\"compile\":3,\"modified\":1654088324,\"ns\":\"\\\\\"}'
+    '{\"slashUrls\":1,\"compile\":3,\"modified\":1654694970,\"ns\":\"\\\\\"}'
   );
 INSERT INTO
   `templates` (
@@ -4811,7 +4981,7 @@ VALUES
     99,
     0,
     0,
-    '{\"slashUrls\":1,\"compile\":3,\"modified\":1654084793,\"ns\":\"\\\\\"}'
+    '{\"slashUrls\":1,\"compile\":3,\"modified\":1654694867,\"ns\":\"\\\\\"}'
   );
 
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
