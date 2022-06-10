@@ -1,11 +1,3 @@
-:root {
-  --col-primary: #65211f;
-  --col-secondary: #ee964b;
-  --col-tertiary: #4f5d2f;
-  --col-background: #d4f4dd;
-  --col-text: #0c0a3e;
-}
-
 footer {
   display: flex;
   flex-direction: column;
