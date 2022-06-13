@@ -34,7 +34,12 @@
                 if ($page->slider_images && count($page->slider_images)) {
                     foreach ($page->slider_images as $image) {
                         $croped = $image->getCrop('MainSlider');
-                        echo "<div class='SliderItems'><img width='1280' height='962' src='$croped->url' alt='Images' class='SliderItemsImages'><div class='SliderItemsText'>$croped->description</div></div>";
+                        echo "
+                        <div class='SliderItems'>
+                            <img width='1280' height='962' src='$croped->url' alt='Images' class='SliderItemsImages'>
+                            <div class='SliderItemsText'>$croped->description</div>
+                        </div>
+                        ";
                     }
                 }
                 ?>
