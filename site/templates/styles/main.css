@@ -1,1 +1,7 @@
-/* blank */ 
+:root {
+    --col-primary: #65211F;
+    --col-secondary: #EE964B;
+    --col-tertiary: #4F5D2F;
+    --col-background: #D4F4DD;
+    --col-text: #0C0A3E;
+}

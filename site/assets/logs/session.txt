@@ -22,3 +22,4 @@
 2022-06-08 16:13:19	admin	http://localhost/openSauce/processwire/login/	Successful login for 'admin'
 2022-06-09 10:17:19	admin	http://localhost/openSauce/processwire/login/	Successful login for 'admin'
 2022-06-13 07:55:49	admin	http://localhost/openSauce/processwire/login/	Successful login for 'admin'
+2022-06-10 16:21:16	admin	http://localhost/opensauce/processwire/login/	Successful login for 'admin'

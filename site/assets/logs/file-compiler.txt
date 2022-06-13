@@ -58,3 +58,7 @@
 2022-06-09 10:58:25	admin	http://localhost/openSauce/menuflex/layer2-2/layer2-2/layer3-3/tetris/	Compiled file: /site/templates/tetris.php
 2022-06-09 10:58:41	admin	http://localhost/openSauce/menuflex/layer2-2/layer2-2/layer3-3/tetris/	Compiled file: /site/templates/tetris.php
 2022-06-09 10:58:51	admin	http://localhost/openSauce/menuflex/layer2-2/layer2-2/layer3-3/tetris/	Compiled file: /site/templates/tetris.php
+2022-06-10 16:17:29	?	?	Compiled file: /site/modules/CookieManagementBanner/CookieManagementBanner.module.php
+2022-06-10 16:17:29	guest	http://localhost/opensauce/	Compiled file: /site/modules/CookieManagementBanner/CookieManagementBanner.config.php
+2022-06-10 16:17:30	guest	http://localhost/opensauce/	Compiled file: /site/templates/home.php
+2022-06-10 16:17:30	guest	http://localhost/opensauce/	Compiled file: /site/modules/CookieManagementBanner/wrapper.tpl.php

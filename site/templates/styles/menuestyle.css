@@ -1,11 +1,5 @@
-/* @import url(./style.css); */
 
 :root {
-  /* --col-primary: #65211f;
-  --col-secondary: #ee964b;
-  --col-primary:#4F5D2F;
-  --col-background: #d4f4dd;
-  --col-text: #0c0a3e; */
   --col-nav-background: var(--col-primary);
   --col-nav-text: var(--col-secondary);
 }
