@@ -1,5 +1,7 @@
 <script src="https://kit.fontawesome.com/18e03e461d.js" crossorigin="anonymous"></script>
 <script src="<?php echo $config->urls->templates ?>scripts/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="<?php echo $config->urls->templates ?>styles/main.css">
+
 
 <!-- <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/open-sauce-one" type="text/css" /> -->
 <link href="<?php echo $config->urls->templates ?>styles/open-sauce-font.css" rel="stylesheet" type="text/css" />

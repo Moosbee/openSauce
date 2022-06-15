@@ -1,5 +1,7 @@
 # OpenSauce
 
+Extar dokumentation in Design/Features.docx
+
 Slogans:
 
 - Wir bringen Geschmack
