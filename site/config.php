@@ -52,8 +52,8 @@ $config->useFunctionsAPI = true;
  */
 $config->dbHost = 'localhost';
 $config->dbName = 'openSauce';
-$config->dbUser = 'root';
-$config->dbPass = '';
+$config->dbUser = 'opens';
+$config->dbPass = 'test';
 $config->dbPort = '3306';
 
 /**
