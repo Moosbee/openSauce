@@ -63,3 +63,9 @@
 2022-06-10 16:17:30	guest	http://localhost/opensauce/	Compiled file: /site/templates/home.php
 2022-06-10 16:17:30	guest	http://localhost/opensauce/	Compiled file: /site/modules/CookieManagementBanner/wrapper.tpl.php
 2022-06-15 07:43:27	guest	http://localhost/openSauce/	Compiled file: /site/templates/home.php
+2022-08-12 15:49:47	?	?	Compiled file: /site/modules/CookieManagementBanner/CookieManagementBanner.module.php
+2022-08-12 15:49:47	guest	http://localhost/www/opensauce/	Compiled file: /site/modules/CookieManagementBanner/CookieManagementBanner.config.php
+2022-08-12 15:49:47	guest	http://localhost/www/openSauce/	Compiled file: /site/templates/home.php
+2022-08-12 15:49:51	guest	http://localhost/www/openSauce/	Compiled file: /site/modules/CookieManagementBanner/wrapper.tpl.php
+2022-08-12 15:49:52	guest	http://localhost/www/openSauce/http404/	Compiled file: /site/templates/basic-page.php
+2022-08-12 15:49:52	guest	http://localhost/www/openSauce/http404/	Compiled file: /site/templates/basic-page.php

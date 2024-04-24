@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mysqldump": "^3.2.0"
+    "mysqldump": "^1.4.2"
   },
   "devDependencies": {
     "mysql-import": "^5.0.21"
